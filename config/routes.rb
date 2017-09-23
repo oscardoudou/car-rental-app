@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :users
   get 'store/index'
   post 'reservations/new'
+  post 'orders/new'
   get '/signup', to: 'users#new'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
