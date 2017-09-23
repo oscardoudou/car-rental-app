@@ -1,0 +1,17 @@
+<% provide(:title, 'All admins') %>
+<h1>All admins</h1>
+
+<ul class="users">
+  <% @users.each do |user| %>
+      <li>
+        <%if user.admin? && !user.sadmin?%>
+        <%= link_to user.name%>
+        <%= link_to user.email%>
+            <%=link_to "edit",edit_user_path(user)%>
+            <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+            <%=yield%>
+        <% end %>
+
+      </li>
+  <% end %>
+</ul>

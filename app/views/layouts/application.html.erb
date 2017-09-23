@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rental Car System</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag     'rental', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="store">
+  <div id="banner">
+    <%= image_tag("logo.png", :size => '50x50')%>
+    <%= @page_title || "Automatic Rental Car System"%>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <a href="http://localhost:3000">Home</a><br />
+      <a href="http://localhost:3000/reservations">Reservations</a><br />
+      <a href="http://localhost:3000/signup">signup</a><br />
+      <a href="http://localhost:3000/login">login</a><br />
+      <%= link_to "Profile", current_user%><br/>
+      <%= button_to "Log out", logout_path, :method=> :delete %><br/>
+
+
+    </div>
+    <div id="main">
+    <%= yield %>
+  </body>
+</html>
+

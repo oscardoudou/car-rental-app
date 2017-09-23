@@ -1,0 +1,27 @@
+<h1>Cars list</h1>
+<p id="notice"><%= notice %></p>
+<% @cars.each do |car| %>
+    <div class="entry">
+      <%= image_tag(car.image_url) %>
+      <h3><%= car.title %></h3>
+      <%= sanitize(car.description) %>
+      <div class="price_line">
+        <span class="price"><%= car.price %></span>
+
+        <%= button_to 'Reserve', new_reservation_path(:car_id => car.id), :method => :post  %>
+
+
+
+
+
+        <%#<%= button_to 'Reservation', reservations_path(:car_id=>car) %>
+        <%#<%= button_to 'Reservation', line_items_path(:car_id=>car) %>
+        <%#<td><%= button_to '+', {:controller => "votes", :action => "create", :car_id => car.id, :user_id=> session[:user_id]} , :method=>:post  %></td>
+        <%#<%= button_to 'Reservation', {:controller => "reservations", :action => "create", :car_id => car.id}, :method => :post %>
+        <%#<%= link_to 'Reservation', new_reservation_path(:car_id => car.id) %>
+
+      </div>
+    </div>
+<% end %>
+
+<%= button_to "Log out", logout_path, :method=> :delete %>

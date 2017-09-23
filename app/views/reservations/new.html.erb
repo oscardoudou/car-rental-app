@@ -1,0 +1,8 @@
+<h1>New Reservation</h1>
+
+
+<h3>Car Information: <%= Car.find(@reservation.car_id).title %></h3>
+
+<%= render 'form', reservation: @reservation, :car_id => @reservation.car_id %>
+
+<%= link_to 'Back', store_path %>

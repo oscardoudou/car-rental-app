@@ -1,0 +1,52 @@
+<%= form_with(model: reservation, local: true) do |form| %>
+  <% if reservation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+
+      <ul>
+      <% reservation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+      <%= form.label :car_id %>
+      <%= form.text_field :car_id, id: :car_id, :readonly =>true %>
+    </div>
+
+    <div class="field">
+      <%= form.label :checkout_time %>
+      <%= form.datetime_select :checkout_time, id: :checkout_time %>
+    </div>
+
+    <div class="field">
+      <%= form.label :return_time %>
+      <%= form.datetime_select :return_time, id: :return_time %>
+    </div>
+
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :reservation_name %>
+    </div>
+
+    <div class="field">
+      <%= form.label :tel %>
+      <%= form.text_field :tel, tel: :reservation_tel %>
+    </div>
+
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email, id: :reservation_email %>
+    </div>
+
+    <div class="field">
+      <%= form.label :address %>
+      <%= form.text_area :address, id: :reservation_address %>
+    </div>
+
+  <div class="actions">
+    <%= form.submit "Confirm Reservation" %>
+  </div>
+<% end %>

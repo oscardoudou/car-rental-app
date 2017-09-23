@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+<h1>Reservation Information: </h1>
+
+<p>
+  <strong>Reservation ID:</strong>
+  <%= @reservation.id %>
+</p>
+
+<p>
+  <strong>Reservation Status:</strong>
+  <%= @reservation.status %>
+</p>
+
+<p>
+  <strong>User ID:</strong>
+  <%= @reservation.user_id %>
+</p>
+
+<p>
+  <strong>Car ID:</strong>
+  <%= @reservation.car_id %>
+</p>
+
+<p>
+  <strong>Reserve Time:</strong>
+  <%= @reservation.reserve_time %>
+</p>
+
+<p>
+  <strong>Checkout Time:</strong>
+  <%= @reservation.checkout_time %>
+</p>
+
+<p>
+  <strong>Return Time:</strong>
+  <%= @reservation.return_time %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reservation.name %>
+</p>
+
+<p>
+  <strong>Tel:</strong>
+  <%= @reservation.tel %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @reservation.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @reservation.address %>
+</p>
+
+<%= button_to 'Cancel reservation', @reservation, :method => :delete, data: {confirm: 'Are you sure?'} %>
+
+
+<%#<%= button_to 'Check out', orders_path(:reservation_id => @reservation.id) %>
+
+<%#<td><%= button_to '+', {:controller => "votes", :action => "create", :car_id => car.id, :user_id=> session[:user_id]} , :method=>:post  %></td>
+
+<%= link_to 'Back', store_path %>

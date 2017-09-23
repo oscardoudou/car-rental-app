@@ -1,0 +1,10 @@
+<%=@user.name%><%=@user.email%>
+<%=link_to "edit", edit_user_path(current_user)%>
+<%if logged_in?%>
+  <%if current_user.admin? && !current_user.sadmin?%>
+    <%=link_to"all user",users_path%>
+        <%=link_to "all admins",adminl_index_path%>
+        <%elsif current_user.sadmin?%>
+        <%=link_to"all superadmins",sadminl_index_path%>
+<%end%>
+<%end%>
