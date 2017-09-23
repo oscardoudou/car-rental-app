@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="e1726ab9-2407-4764-a17d-e06d06bd7aca" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/adminl/index.html.erb" afterPath="$PROJECT_DIR$/app/views/adminl/index.html.erb" />
     </list>
+=======
+    <list default="true" id="e1726ab9-2407-4764-a17d-e06d06bd7aca" name="Default" comment="" />
+>>>>>>> c99166855355601d4441776f58731f98aac935ec
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -420,14 +424,22 @@
       <workItem from="1506193902753" duration="532000" />
       <workItem from="1506194452275" duration="2735000" />
       <workItem from="1506199405170" duration="5000" />
+<<<<<<< HEAD
       <workItem from="1506199564628" duration="27000" />
       <workItem from="1506199950720" duration="14000" />
       <workItem from="1506199992805" duration="34000" />
+=======
+      <workItem from="1506199564628" duration="440000" />
+>>>>>>> c99166855355601d4441776f58731f98aac935ec
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="100696000" />
+=======
+    <option name="totallyTimeSpent" value="101061000" />
+>>>>>>> c99166855355601d4441776f58731f98aac935ec
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
