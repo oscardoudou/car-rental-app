@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e1726ab9-2407-4764-a17d-e06d06bd7aca" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/rental.iml" afterPath="$PROJECT_DIR$/.idea/rental.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="e1726ab9-2407-4764-a17d-e06d06bd7aca" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
     <ignored path="$PROJECT_DIR$/public/system/" />
@@ -442,12 +437,12 @@
       <workItem from="1506193902753" duration="532000" />
       <workItem from="1506194452275" duration="2735000" />
       <workItem from="1506199405170" duration="5000" />
-      <workItem from="1506199564628" duration="27000" />
+      <workItem from="1506199564628" duration="440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100648000" />
+    <option name="totallyTimeSpent" value="101061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="0" width="1376" height="900" extended-state="6" />
