@@ -31,6 +31,7 @@
         <td><font size=2><%= link_to 'Show', reservation %></td>
         <td><font size=2><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
         <td><font size=2><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><font size=2><%= button_to'Checkout', new_order_path(:reservation_id => reservation.id) , :method => :post %></td>
       </tr>
     <% end %>
   </tbody>
