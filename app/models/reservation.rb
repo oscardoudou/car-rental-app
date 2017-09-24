@@ -1,8 +1,11 @@
 class Reservation < ApplicationRecord
-  #this code need to be changed, one user can only reserve one car one time
-  #has_many :line_items, :dependent => :destroy
+
+  validates :user_id, presence: true
 
   validate :after_current?
+
+  validate :have_reservation?
+
   def after_current?
     return if checkout_time.blank?
     if checkout_time < reserve_time
@@ -10,17 +13,11 @@ class Reservation < ApplicationRecord
     end
   end
 
-
-validates :user_id, presence: true
-=begin
-  def add_car(car_id)
-    current_item= line_items.find_by_car_id(car_id)
-    if current_item
-      current_item.quantity +=1
-    else
-      current_item = line_items.build(:car_id=>car_id)
+  def have_reservation?
+    check_reservation = Reservation.find_by_user_id(self.user_id)
+    if !check_reservation.nil?
+      errors.add(:id, "you have unfinished reservation")
     end
-    current_item
   end
-=end
+
 end

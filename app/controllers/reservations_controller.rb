@@ -38,17 +38,17 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     car = Car.find(@reservation.car_id)
     #change car status to reserved
-    car.update_attribute('status', 'reserved')
     @reservation.reserve_time = Time.now
     # period = @reservation.return_time
     @reservation.return_time = @reservation.checkout_time+Integer(reservation_params[:return_time]).hours
-    #hardcode until finish the User model by feiteng
+
     if current_user != nil
       @reservation.user_id = current_user.id
     end
     @reservation.status = 'reserved'
     respond_to do |format|
       if @reservation.save
+        car.update_attribute('status', 'reserved')
         format.html {redirect_to @reservation, notice: 'Reservation was successfully created.'}
         format.json {render :show, status: :created, location: @reservation}
       else
