@@ -1,6 +1,11 @@
 <h1>New Order</h1>
 <fieldset>
   <legend>Please Confirm Your Information and Check out</legend>
+  <h3>Name :<%= Reservation.find(@order.reservation_id).name %></h3>
+  <h3>Car :<%= Reservation.find(@order.reservation_id).car_id %></h3>
+  <h3>Email :<%= Reservation.find(@order.reservation_id).email %></h3>
+  <h3>Address :<%= Reservation.find(@order.reservation_id).address %></h3>
+  <h3>Reservation id :<%= @order.reservation_id %></h3>
   <%= render 'form', order: @order %>
 
 </fieldset>

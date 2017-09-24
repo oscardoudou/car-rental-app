@@ -22,6 +22,9 @@ class OrdersController < ApplicationController
 =end
 
     @order = Order.new
+    reservation = Reservation.find(params[:reservation_id])
+    @order.reservation_id = reservation.id
+
     respond_to do |format|
       format.html
       format.xml {render :xml => @order}
