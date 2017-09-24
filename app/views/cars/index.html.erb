@@ -4,47 +4,56 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Image</th>
-      <th>Price</th>
-      <%#:status, :license_plate, :model, :manufactor, style, :location %>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Image</th>
+    <th>Price</th>
+    <%#:status, :license_plate, :model, :manufactor, style, :location %>
 
-      <th>Status</th>
-      <th>License_plate</th>
-      <th>Model</th>
-      <th>Manufactor</th>
-      <th>Style</th>
-      <th>Location</th>
+    <th>Status</th>
+    <th>User</th>
+    <th>License_plate</th>
+    <th>Model</th>
+    <th>Manufactor</th>
+    <th>Style</th>
+    <th>Location</th>
 
-      <%#:status, :license_plate, :model, :manufactor, style, :location %>
-      <th colspan="3"></th>
-    </tr>
+    <%#:status, :license_plate, :model, :manufactor, style, :location %>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @cars.each do |car| %>
+  <% @cars.each do |car| %>
       <tr>
         <td><%= car.title %></td>
         <td><%= truncate(strip_tags(car.description), :length => 100) %></td>
-        <td><%= image_tag(car.image_url, :class =>'list_image', :size => '150x100') %></td>
+        <td><%= image_tag(car.image_url, :class => 'list_image', :size => '150x100') %></td>
         <td><%= car.price %></td>
 
         <%#:status, :license_plate, :model, :manufactor, style, :location %>
         <td><%= car.status %></td>
+
+        <% if car.status == 'reserved' %>
+            <td><%= Reservation.find_by(car_id:car.id, status:'reserved').name %></td>
+        <% else %>
+            <td></td>
+        <% end %>
+
         <td><%= car.license_plate %></td>
         <td><%= car.model %></td>
         <td><%= car.manufactor %></td>
         <td><%= car.style %></td>
         <td><%= car.location %></td>
+
         <%#:status, :license_plate, :model, :manufactor, style, :location %>
 
         <td><%= link_to 'Show', car %></td>
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', car, method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
