@@ -7,13 +7,13 @@ class ReservationsController < ApplicationController
     @user=User.all
     if logged_in?
       if current_user.admin?
-    @reservations = Reservation.all
+        @reservations = Reservation.all
       else
-        @reservations=Reservation.where( :email => current_user.email)
+        @reservations=Reservation.where(:email => current_user.email)
       end
-      else
+    else
       @reservations=[]
-      end
+    end
   end
 
   # GET /reservations/1
@@ -38,20 +38,22 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     car = Car.find(@reservation.car_id)
     #change car status to reserved
-    car.update_attribute('status','reserved')
+    car.update_attribute('status', 'reserved')
     @reservation.reserve_time = Time.now
     # period = @reservation.return_time
     @reservation.return_time = @reservation.checkout_time+Integer(reservation_params[:return_time]).hours
     #hardcode until finish the User model by feiteng
-    #@reservation.user_id = @reservation.return_time
-    @reservation.status = car.title
+    if current_user != nil
+      @reservation.user_id = current_user.id
+    end
+    @reservation.status = 'reserved'
     respond_to do |format|
       if @reservation.save
-        format.html { redirect_to @reservation, notice: 'Reservation was successfully created.' }
-        format.json { render :show, status: :created, location: @reservation }
+        format.html {redirect_to @reservation, notice: 'Reservation was successfully created.'}
+        format.json {render :show, status: :created, location: @reservation}
       else
-        format.html { render :new }
-        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @reservation.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -61,11 +63,11 @@ class ReservationsController < ApplicationController
   def confirm
     respond_to do |format|
       if @reservation.update(reservation_params)
-        format.html { redirect_to @reservation, notice: 'Reservation was successfully updated.' }
-        format.json { render :show, status: :ok, location: @reservation }
+        format.html {redirect_to @reservation, notice: 'Reservation was successfully updated.'}
+        format.json {render :show, status: :ok, location: @reservation}
       else
-        format.html { render :edit }
-        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @reservation.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -77,11 +79,11 @@ class ReservationsController < ApplicationController
 
     respond_to do |format|
       if @reservation.update(reservation_params)
-        format.html { redirect_to @reservation, notice: 'Reservation was successfully updated.' }
-        format.json { render :show, status: :ok, location: @reservation }
+        format.html {redirect_to @reservation, notice: 'Reservation was successfully updated.'}
+        format.json {render :show, status: :ok, location: @reservation}
       else
-        format.html { render :edit }
-        format.json { render json: @reservation.errors, status: :unprocessable_entity }
+        format.html {render :edit}
+        format.json {render json: @reservation.errors, status: :unprocessable_entity}
       end
     end
   end
@@ -92,25 +94,25 @@ class ReservationsController < ApplicationController
     #@reservation = current_reservation
     car = Car.find(@reservation.car_id)
     #free the car to available
-    car.update_attribute('status','available')
+    car.update_attribute('status', 'available')
     @reservation.destroy
     session[:reservation_id] = nil
     respond_to do |format|
-      format.html { redirect_to store_url, notice: 'Reservation is canceled.' }
-      format.json { head :no_content }
+      format.html {redirect_to store_url, notice: 'Reservation is canceled.'}
+      format.json {head :no_content}
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_reservation
-      @reservation = Reservation.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_reservation
+    @reservation = Reservation.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    #def reservation_params
-      #params.fetch(:reservation, {})
-    #end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  #def reservation_params
+  #params.fetch(:reservation, {})
+  #end
 
 
   def reservation_params
