@@ -29,7 +29,7 @@ class ReservationsController < ApplicationController
   end
 
   # GET /reservations/1/edit
-  def edit
+  def editcreated_at
   end
 
   # POST /reservations

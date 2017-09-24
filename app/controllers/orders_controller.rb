@@ -39,8 +39,8 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
 
-    @order = Order.new()
-    reservation = Reservation.find(params[:reservation_id])
+    @order = Order.new(order_params)
+    reservation = Reservation.find(@order.reservation_id)
     # @order = Order.new(order_params)
     # @order.add_line_items_from_reservation(current_reservation)
 @order.name= '12345'

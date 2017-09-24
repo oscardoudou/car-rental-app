@@ -6,7 +6,7 @@
   <h3>Email :<%= Reservation.find(@order.reservation_id).email %></h3>
   <h3>Address :<%= Reservation.find(@order.reservation_id).address %></h3>
   <h3>Reservation id :<%= @order.reservation_id %></h3>
-  <%= render 'form', order: @order %>
+  <%= render 'form', order: @order, :reservation_id => @order.reservation_id %>
 
 </fieldset>
 <%= link_to 'Back', orders_path %>
