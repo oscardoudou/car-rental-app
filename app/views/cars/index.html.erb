@@ -35,7 +35,7 @@
         <%#:status, :license_plate, :model, :manufactor, style, :location %>
         <td><%= car.status %></td>
 
-        <% if car.status == 'reserved' %>
+        <% if (car.status == 'reserved' and Reservation.find_by(car_id:car.id, status:'reserved') != nil) %>
             <td><%= Reservation.find_by(car_id:car.id, status:'reserved').name %></td>
         <% else %>
             <td></td>
