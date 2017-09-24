@@ -21,10 +21,13 @@
       <%= form.datetime_select :checkout_time, id: :checkout_time %>
     </div>
 
+
     <div class="field">
-      <%= form.label :return_time %>
-      <%= form.datetime_select :return_time, id: :return_time %>
+      <%= form.label :Rental_period %>
+      <%= form.select :return_time, options_for_select([1,2,3,4,5,6,7,8,9,10],1), {:class => 'form-control', :prompt => ''} %>
+      <%= form.label :hours %>
     </div>
+
 
     <div class="field">
       <%= form.label :name %>

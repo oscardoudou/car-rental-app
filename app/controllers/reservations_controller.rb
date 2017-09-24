@@ -40,8 +40,10 @@ class ReservationsController < ApplicationController
     #change car status to reserved
     car.update_attribute('status','reserved')
     @reservation.reserve_time = Time.now
+    # period = @reservation.return_time
+    @reservation.return_time = @reservation.checkout_time+Integer(reservation_params[:return_time]).hours
     #hardcode until finish the User model by feiteng
-    @reservation.user_id = 34
+    #@reservation.user_id = @reservation.return_time
     @reservation.status = car.title
     respond_to do |format|
       if @reservation.save
