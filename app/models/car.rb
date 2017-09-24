@@ -8,9 +8,9 @@ class Car < ApplicationRecord
   STYLE_TYPES =["Coupe","Sedan","SUV"]
   #before_destroy :ensure_not_referenced_by_any_line_item
 
-
-  def self.search(search1, search2)
-    where("style LIKE ? and model LIKE ?", "%#{search1}%", "%#{search2}")
+  #Search cars using location or model or manufacturer or style or status
+  def self.search(search1, search2, search3, search4, search5)
+    where("location LIKE ? and model LIKE ? and manufactor LIKE ? and style LIKE ? and status LIKE ?", "%#{search1}%", "%#{search2}%", "%#{search3}%", "%#{search4}%", "%#{search5}%")
   end
 
 =begin
