@@ -5,6 +5,15 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+    if logged_in?
+      if current_user.admin?
+        @orders = Order.all
+      else
+        @orders=Order.where(:email => current_user.email)
+      end
+    else
+      @orders=[]
+    end
   end
 
   # GET /orders/1
