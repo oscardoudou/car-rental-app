@@ -23118,3 +23118,406 @@ Processing by CarsController#index as HTML
 Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-09-23 22:38:54 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."status" = ? LIMIT ?[0m  [["status", "available"], ["LIMIT", 11]]
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."status" = ? LIMIT ?[0m  [["status", "available"], ["LIMIT", 11]]
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."status" = ? LIMIT ?[0m  [["status", "available"], ["LIMIT", 11]]
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."status" = ? LIMIT ?[0m  [["status", "available"], ["LIMIT", 11]]
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."status" = ? LIMIT ?[0m  [["status", "available"], ["LIMIT", 11]]
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."status" = ? LIMIT ?[0m  [["status", "available"], ["LIMIT", 11]]
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."status" = ? LIMIT ?[0m  [["status", "available"], ["LIMIT", 11]]
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."status" = ? LIMIT ?[0m  [["status", "available"], ["LIMIT", 11]]
+  Rendered store/index.html.erb within layouts/application (287.9ms)
+Completed 500 Internal Server Error in 302ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `recipes_path' for #<#<Class:0x007f8d5d462ae8>:0x007f8d5d4607e8>):
+    1: <h1>Cars list</h1>
+    2: <p id="notice"><%= notice %></p>
+    3: 
+    4: <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
+    5:     <%= text_field_tag :search, params[:search], placeholder: "Search Recipes" %>
+    6:     <%= submit_tag "Search", :name => nil %>
+    7: <% end %>
+  
+app/views/store/index.html.erb:4:in `_app_views_store_index_html_erb__3906573231747378767_70122565999100'
+Started GET "/" for 127.0.0.1 at 2017-09-23 22:46:38 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (51.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 162ms (Views: 138.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=Honda" for 127.0.0.1 at 2017-09-23 22:46:58 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Honda"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `search' for #<Class:0x007f8d585a5400>):
+  
+app/controllers/store_controller.rb:9:in `index'
+Started GET "/?utf8=%E2%9C%93&search=Honda" for 127.0.0.1 at 2017-09-23 22:47:45 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Honda"}
+Completed 500 Internal Server Error in 15ms
+
+
+  
+NoMethodError (undefined method `search' for Car (call 'Car.connection' to establish a connection):Class):
+  
+app/controllers/store_controller.rb:9:in `index'
+Started GET "/?utf8=%E2%9C%93&search=Honda" for 127.0.0.1 at 2017-09-23 22:48:40 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Honda"}
+Completed 500 Internal Server Error in 21ms
+
+
+  
+NoMethodError (undefined method `search' for Car (call 'Car.connection' to establish a connection):Class):
+  
+app/controllers/store_controller.rb:9:in `index'
+Started GET "/?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2017-09-23 22:49:02 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+Completed 500 Internal Server Error in 11ms
+
+
+  
+NoMethodError (undefined method `search' for Car (call 'Car.connection' to establish a connection):Class):
+  
+app/controllers/store_controller.rb:9:in `index'
+Started GET "/" for 127.0.0.1 at 2017-09-23 22:54:51 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ?[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (27.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 67.8ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/reservations/new?car_id=4" for 127.0.0.1 at 2017-09-23 22:54:54 -0400
+Processing by ReservationsController#new as HTML
+  Parameters: {"authenticity_token"=>"vTuFGxC38Z1F6WxLv2t53vRAxQdKlFdmPd8rUwdG3yHUIgajEBwQoKtoPy6KHJp8uT/cgWdxn9g2l0xzdHvqFA==", "car_id"=>"4"}
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering reservations/new.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reservations/_form.html.erb (21.2ms)
+  Rendered reservations/new.html.erb within layouts/application (25.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 49.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 22:54:57 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ?[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (14.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 42.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:01:31 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (32.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 79.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:02:16 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (18.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:02:59 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at DESC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (43.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 128ms (Views: 111.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:03:00 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at DESC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (15.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 57.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:03:01 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at DESC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 47.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:03:29 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at ASC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (36.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 137ms (Views: 121.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:04:35 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at ASC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (32.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 130ms (Views: 111.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:06:55 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at ASC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=" for 127.0.0.1 at 2017-09-23 23:07:04 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `search' for #<Class:0x007f8d5d0d8a30>):
+  
+app/controllers/store_controller.rb:8:in `index'
+Started GET "/?utf8=%E2%9C%93&search=coupe" for 127.0.0.1 at 2017-09-23 23:11:37 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"coupe"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `search' for #<Class:0x007f8d591b2bd0>):
+  
+app/controllers/store_controller.rb:8:in `index'
+Started GET "/?utf8=%E2%9C%93&search=coupe" for 127.0.0.1 at 2017-09-23 23:12:00 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"coupe"}
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `search' for #<Class:0x007f8d5c68b690>):
+  
+app/controllers/store_controller.rb:8:in `index'
+Started GET "/?utf8=%E2%9C%93&search=coupe" for 127.0.0.1 at 2017-09-23 23:13:50 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"coupe"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (model LIKE '%coupe%' ) ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 124ms (Views: 105.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=coupe" for 127.0.0.1 at 2017-09-23 23:14:30 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"coupe"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%coupe%' ) ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (32.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 125ms (Views: 105.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:17:23 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at ASC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (31.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 100ms (Views: 87.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=coupe&search=" for 127.0.0.1 at 2017-09-23 23:17:28 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (16.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 43.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=coupe&search=Civic" for 127.0.0.1 at 2017-09-23 23:17:45 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Civic"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (19.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=&search=civic" for 127.0.0.1 at 2017-09-23 23:17:51 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"civic"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=coupe&search=" for 127.0.0.1 at 2017-09-23 23:17:57 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 53.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:19:12 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at ASC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (27.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 73.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=&search=Civic" for 127.0.0.1 at 2017-09-23 23:19:17 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Civic"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (19.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=coupe&search=" for 127.0.0.1 at 2017-09-23 23:19:29 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=&search=Civic" for 127.0.0.1 at 2017-09-23 23:20:30 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Civic"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '' and model LIKE '') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 50.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:20:49 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at ASC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (38.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 74.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=coupe&search=" for 127.0.0.1 at 2017-09-23 23:20:53 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '' and model LIKE '') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 41.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=&search=Civic" for 127.0.0.1 at 2017-09-23 23:22:05 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Civic"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (27.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 84ms (Views: 70.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search=&search=Civic" for 127.0.0.1 at 2017-09-23 23:26:31 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Civic"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (24.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 92ms (Views: 86.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search1=coupe&search2=" for 127.0.0.1 at 2017-09-23 23:27:35 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search1"=>"coupe", "search2"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%coupe%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (18.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 64.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search1=coupe&search2=civic" for 127.0.0.1 at 2017-09-23 23:27:49 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search1"=>"coupe", "search2"=>"civic"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%coupe%' and model LIKE '%civic%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search1=&search2=" for 127.0.0.1 at 2017-09-23 23:27:55 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search1"=>"", "search2"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (19.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search1=&search2=civic" for 127.0.0.1 at 2017-09-23 23:28:00 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search1"=>"", "search2"=>"civic"}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (style LIKE '%%' and model LIKE '%civic%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-23 23:29:19 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ? ORDER BY created_at ASC[0m  [["status", "available"]]
+  Rendered store/index.html.erb within layouts/application (18.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 56ms (Views: 50.0ms | ActiveRecord: 0.7ms)
+
+

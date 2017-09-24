@@ -1,5 +1,12 @@
 <h1>Cars list</h1>
 <p id="notice"><%= notice %></p>
+
+<%= form_tag(store_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search1, params[:search1], placeholder: "Search Style" %>
+    <%= text_field_tag :search2, params[:search2], placeholder: "Search Model" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
 <% @cars.each do |car| %>
     <div class="entry">
       <%= image_tag(car.image_url) %>
@@ -9,10 +16,6 @@
         <span class="price"><%= car.price %></span>
 
         <%= button_to 'Reserve', new_reservation_path(:car_id => car.id), :method => :post  %>
-
-
-
-
 
         <%#<%= button_to 'Reservation', reservations_path(:car_id=>car) %>
         <%#<%= button_to 'Reservation', line_items_path(:car_id=>car) %>
