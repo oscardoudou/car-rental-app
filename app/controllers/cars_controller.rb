@@ -25,7 +25,7 @@ class CarsController < ApplicationController
   # POST /cars.json
   def create
     @car = Car.new(car_params)
-
+    @car.status = "available"
     respond_to do |format|
       if @car.save
         format.html {redirect_to @car, notice: 'Car was successfully created.'}
@@ -78,6 +78,6 @@ class CarsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def car_params
-    params.require(:car).permit(:title, :description, :image_url, :price)
+    params.require(:car).permit(:title, :description, :image_url, :price, :status, :license_plate, :model, :manufactor, :style, :location )
   end
 end

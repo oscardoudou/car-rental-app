@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <strong>Title:</strong>
   <%= @car.title %>
@@ -19,6 +20,40 @@
   <strong>Price:</strong>
   <%= @car.price %>
 </p>
+
+<%#:status, :license_plate, :model, :manufactor, style, :location %>
+
+<p>
+  <strong>Status:</strong>
+  <%= @car.status %>
+</p>
+
+<p>
+  <strong>License plate:</strong>
+  <%= @car.license_plate %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @car.model %>
+</p>
+
+<p>
+  <strong>Manufactor:</strong>
+  <%= @car.manufactor %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @car.style %>
+</p>
+
+<p>
+  <strong>location:</strong>
+  <%= @car.location %>
+</p>
+
+
 
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>

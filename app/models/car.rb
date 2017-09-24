@@ -3,7 +3,9 @@ class Car < ApplicationRecord
   has_many :line_items
   has_many :orders, :through => :line_items
   has_many :reservation
-  belongs_to :reservation
+  validates_uniqueness_of :license_plate
+  validates :license_plate, :length => { :is => 7 }
+  STYLE_TYPES =["Coupe","Sedan","SUV"]
   before_destroy :ensure_not_referenced_by_any_line_item
   private
   def ensure_not_referenced_by_any_line_item

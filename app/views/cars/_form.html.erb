@@ -1,37 +1,66 @@
 <%= form_with(model: car, local: true) do |form| %>
-  <% if car.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+    <% if car.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
 
-      <ul>
-      <% car.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% car.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :car_title %>
     </div>
-  <% end %>
+    <div class="field">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :car_title %>
+    </div>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :car_title %>
-  </div>
+    <%#:status, :license_plate, :model, :manufactor, style, :location %>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description,:rows=>6, id: :car_description %>
-  </div>
+    <div class="field">
+      <%= form.label :license_plate %>
+      <%= form.text_field :license_plate, id: :license_plate, :maxlength => 7 ,:size => 10%>
+    </div>
+    <div class="field">
+      <%= form.label :model %>
+      <%= form.text_field :model, id: :model %>
+    </div>
+    <div class="field">
+      <%= form.label :manufactor %>
+      <%= form.text_field :manufactor, id: :manufactor %>
+    </div>
+    <div class="field">
+      <%= form.label :style %>
+      <%= form.select :style, Car::STYLE_TYPES, id: :style %>
+    </div>
+    <div class="field">
+      <%= form.label :location %>
+      <%= form.text_field :location, id: :location %>
+    </div>
 
-  <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :car_image_url %>
-  </div>
+    <%#:status, :license_plate, :model, :manufactor, style, :location %>
 
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price, id: :car_price %>
-  </div>
+    <div class="field">
+      <%= form.label :description %>
+      <%= form.text_area :description, :rows => 6, id: :car_description %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="field">
+      <%= form.label :image_url %>
+      <%= form.text_field :image_url, id: :car_image_url %>
+    </div>
+
+    <div class="field">
+      <%= form.label :price %>
+      <%= form.text_field :price, id: :car_price %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
 <% end %>
