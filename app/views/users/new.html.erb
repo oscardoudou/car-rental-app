@@ -21,13 +21,13 @@
 
         <%if current_user.sadmin?%>
             <%= f.label :admin, "admin" %>
-            <%= f.password_field :admin, class: 'form-control' %>
+            <%= f.check_box :admin, class: 'form-control' %>
 
             <%= f.label :sadmin, "sadmin" %>
-            <%= f.password_field :sadmin, class: 'form-control' %>
+            <%= f.check_box :sadmin, class: 'form-control' %>
           <%elsif  current_user.admin?%>
             <%= f.label :admin, "admin" %>
-            <%= f.password_field :admin, class: 'form-control' %>
+            <%= f.check_box :admin, class: 'form-control' %>
 
 
             <%end%>
