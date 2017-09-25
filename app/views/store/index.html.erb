@@ -27,7 +27,11 @@
       <div class="price_line">
         <span class="price"><%= car.price %></span>
         <% if car.status == 'available' %>
+            <%if logged_in?%>
             <%= button_to 'Reserve', new_reservation_path(:car_id => car.id), :method => :post %>
+                <%else%>
+            <%= link_to 'Reserve', login_path%>
+                <%end%>
         <% end %>
         <%#<%= button_to 'Reservation', reservations_path(:car_id=>car) %>
         <%#<%= button_to 'Reservation', line_items_path(:car_id=>car) %>
