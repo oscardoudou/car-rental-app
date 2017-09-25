@@ -24,18 +24,22 @@ class OrdersController < ApplicationController
 
   # GET /orders/new
   def new
-=begin
-    if @reservation.nil?
-      redirect_to store_url, :notice => "You have no reservation"
-      return
-    end
-=end
 
     @order = Order.new
+
+    if params.key?(:reservation_id)
     reservation = Reservation.find(params[:reservation_id])
     @order.reservation_id = reservation.id
+    @order.name = reservation.name
+    @order.car_id = reservation.car_id
+    @order.email = reservation.email
+    @order.address = reservation.address
+    else
+      @order.reservation_id = 2500
+      render "orders/new"
+    end
 
-    respond_to do |format|
+      respond_to do |format|
       format.html
       format.xml {render :xml => @order}
     end
@@ -50,15 +54,15 @@ class OrdersController < ApplicationController
   def create
 
     @order = Order.new(order_params)
-    reservation = Reservation.find(@order.reservation_id)
+    #reservation = Reservation.find(@order.reservation_id)
     # @order = Order.new(order_params)
     # @order.add_line_items_from_reservation(current_reservation)
-@order.name= '12345'
-    @order.name=reservation.name
-    @order.car_id=reservation.car_id
-    @order.address=reservation.address
-    @order.email=reservation.email
-    @order.status='checked out'
+    #@order.name= '12345'
+    #@order.name=reservation.name
+    #@order.car_id=reservation.car_id
+    #@order.address=reservation.address
+    #@order.email=reservation.email
+    #@order.status='checked out'
 
     respond_to do |format|
       if @order.save
@@ -108,6 +112,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id)
+      params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id )
     end
 end

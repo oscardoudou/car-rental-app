@@ -11,6 +11,53 @@
         </div>
     <% end %>
 
+    <%if @order.reservation_id == 2500%>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :order_id %>
+    </div>
+    <%else%>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name, id: :reservation_id %>
+    </div>
+    <%end%>
+
+    <%if @order.reservation_id == 2500%>
+    <div class="field">
+      <%= form.label :car_id %>
+      <%= form.text_field :car_id, id: :order_car_id %>
+    </div>
+    <%else%>
+        <div class="field">
+          <%= form.label :car_id %>
+          <%= form.text_field :car_id, id: :reservation_id %>
+        </div>
+    <%end%>
+
+    <%if @order.reservation_id == 2500%>
+    <div class="field">
+      <%= form.label :email%>
+      <%= form.text_field :email, id: :order_id %>
+    </div>
+    <%else%>
+        <div class="field">
+          <%= form.label :email %>
+          <%= form.text_field :email, id: :reservation_id %>
+        </div>
+    <%end%>
+
+    <%if @order.reservation_id == 2500%>
+    <div class="field">
+      <%= form.label :address %>
+      <%= form.text_field :address, id: :order_id %>
+    </div>
+    <%else%>
+        <div class="field">
+          <%= form.label :address %>
+          <%= form.text_field :address, id: :reservation_id %>
+        </div>
+    <%end%>
 
     <div class="field">
       <%= form.label :reservation_id %>
