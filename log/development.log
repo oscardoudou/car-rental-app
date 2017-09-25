@@ -39688,3 +39688,171 @@ Processing by CarsController#show as HTML
 Completed 200 OK in 42ms (Views: 36.1ms | ActiveRecord: 1.2ms)
 
 
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."status" = ?[0m  [["status", "reserved"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reservations" SET "status" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["status", "1"], ["updated_at", "2017-09-25 02:37:26.721589"], ["id", 46]]
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."status" = ?[0m  [["status", "reserved"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "status" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["status", "1"], ["updated_at", "2017-09-25 02:39:10.775477"], ["id", 46]]
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."status" = ?[0m  [["status", "reserved"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["status", "1"], ["updated_at", "2017-09-25 02:45:22.482194"], ["id", 46]]
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."status" = ?[0m  [["status", "reserved"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reservations" SET "status" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["status", "1"], ["updated_at", "2017-09-25 03:14:49.075336"], ["id", 46]]
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-09-24 23:24:35 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (282.2ms)
+Completed 200 OK in 419ms (Views: 387.0ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-24 23:24:40 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered reservations/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 87ms (Views: 71.6ms | ActiveRecord: 3.6ms)
+
+
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."status" = ? LIMIT ?[0m  [["status", "reserved"], ["LIMIT", 1]]
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE "cars"."status" = ?[0m  [["status", "reserved"]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = ?, "updated_at" = ? WHERE "cars"."id" = ?[0m  [["status", "1"], ["updated_at", "2017-09-25 03:30:20.125418"], ["id", 4]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = ?, "updated_at" = ? WHERE "cars"."id" = ?[0m  [["status", "1"], ["updated_at", "2017-09-25 03:30:20.130452"], ["id", 5]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = ?, "updated_at" = ? WHERE "cars"."id" = ?[0m  [["status", "1"], ["updated_at", "2017-09-25 03:30:20.134025"], ["id", 8]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mReservation Load (3.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (DATE(created_at) = '2017-09-24')[0m
+  [1m[36mReservation Load (1.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (DATE(created_at) < '2017-09-24')[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reservations" SET "created_at" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["created_at", nil], ["updated_at", "2017-09-25 03:39:31.319536"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < '2017-09-25 03:40:24.038423')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "reservations" SET "created_at" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["created_at", nil], ["updated_at", "2017-09-25 03:40:24.067176"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (4.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < '2017-09-25 03:43:11.139643')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "created_at" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["created_at", nil], ["updated_at", "2017-09-25 03:43:11.199564"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (1.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < '2017-09-25 03:45:00')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reservations" SET "created_at" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["created_at", nil], ["updated_at", "2017-09-25 03:45:40.545207"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (DATE(created_at) < '2017-09-25 03:46:00')[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "created_at" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["created_at", nil], ["updated_at", "2017-09-25 03:46:20.405526"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."status" = ?[0m  [["status", "reserved"]]
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (status = 'reserved')[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (status < 'reserved')[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < 'reserved')[0m
+  [1m[36mReservation Load (2.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < '2017-09-24 23:50:59 -0400')[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < '2017-09-24 23:51:26 -0400')[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < '2017-09-24 23:51:37 -0400')[0m
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < '2017-09-24 23:51:51 -0400')[0m
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < '2017-09-19 23:52:22 -0400')[0m
+  [1m[36mReservation Load (1.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (created_at < '2017-09-23 23:52:35 -0400')[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-23 17:54:38 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (2.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-23 17:56:12 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 22:56:29 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (1.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 22:57:12 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 22:58:31 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (2.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 23:30:08 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (3.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 23:30:38 -0400' and status = 'reserved')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reservations" SET "status" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["status", "canceled"], ["updated_at", "2017-09-25 04:00:38.511344"], ["id", 46]]
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (2.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 23:31:35 -0400' and status = 'reserved')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "reservations" SET "status" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["status", "canceled"], ["updated_at", "2017-09-25 04:01:35.887572"], ["id", 46]]
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (2.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 23:32:10 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (2.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 23:39:01 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "created_at" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["created_at", nil], ["updated_at", "2017-09-25 04:09:01.227013"], ["id", 46]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (2.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 23:39:17 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."id" = ? LIMIT ?[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["status", "canceled"], ["updated_at", "2017-09-25 04:09:17.419879"], ["id", 46]]
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (1.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (reserve_time < '2017-09-24 23:44:42 -0400' and status = 'reserved')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:46:05 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:46:54 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:47:33 -0400' and status = 'reserved')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (1.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:47:57 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (1.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:49:00 -0400' and status = 'reserved')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 6], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."status" IN ('reserved', 'checkedout') LIMIT ?[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:49:46 -0400' and status = 'reserved')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reservations" SET "status" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["status", "cancled"], ["updated_at", "2017-09-25 04:19:46.321312"], ["id", 46]]
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (1.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:50:37 -0400' and status = 'reserved')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "reservations" SET "status" = ?, "updated_at" = ? WHERE "reservations"."id" = ?[0m  [["status", "cancled"], ["updated_at", "2017-09-25 04:20:37.398457"], ["id", 46]]
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:55:07 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (1.0ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:56:32 -0400' and status = 'reserved')[0m
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT  "reservations".* FROM "reservations" WHERE (checkout_time < '2017-09-24 23:59:54 -0400' and status = 'reserved') AND "reservations"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 00:00:31 -0400' and status = 'reserved')[0m
