@@ -10,6 +10,7 @@ class CarsController < ApplicationController
   # GET /cars/1
   # GET /cars/1.json
   def show
+    @orders = Order.where(:car_id => params[:id]).order("created_at ASC")
   end
 
   # GET /cars/new
