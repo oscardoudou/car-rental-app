@@ -4,13 +4,13 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @user=User.all
     @orders = Order.all
     if logged_in?
       if current_user.admin?
         @orders = Order.all
       else
-        @orders=Order.where(:user_id => current_user.id)
+        @orders=Order.where(:email => current_user.email)
+        #@orders=Order.where(:user_id => current_user.id)
       end
     else
       @orders=[]
@@ -79,7 +79,9 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        #reservation.update_attribute('status', 'checkedout')   #update_attr 方法限制长度？
+        if @order.reservation_id != 2500
+        reservation.update_attribute(:status, 'checked out')
+        end
         ##reservation.update_attribute('status','checkout')
         # Reservation.destroy(session[:reservation_id])
         # session[:reservation_id]=nil
