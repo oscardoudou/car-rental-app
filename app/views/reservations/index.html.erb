@@ -4,21 +4,21 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Reservation ID</th>
-      <th>User ID</th>
-      <th>Car ID</th>
-      <th>Status</th>
-      <th>Reserve time</th>
-      <th>Checkout time</th>
-      <th>Return time</th>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Reservation ID</th>
+    <th>User ID</th>
+    <th>Car ID</th>
+    <th>Status</th>
+    <th>Reserve time</th>
+    <th>Checkout time</th>
+    <th>Return time</th>
+    <th>Name</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @reservations.each do |reservation| %>
+  <% @reservations.each do |reservation| %>
       <tr>
         <td><font size=2><%= reservation.id %></td>
         <td><font size=2><%= reservation.user_id %></td>
@@ -30,10 +30,13 @@
         <td><font size=2><%= reservation.name %></td>
         <td><font size=2><%= link_to 'Show', reservation %></td>
         <td><font size=2><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-        <td><font size=2><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><font size=2><%= button_to'Checkout', new_order_path(:reservation_id => reservation.id) , :method => :post %></td>
+        <td><font size=2><%= link_to 'Destroy', reservation, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td>
+          <% if reservation.status == 'reserved' %>
+              <%= button_to 'Checkout', new_order_path(:reservation_id => reservation.id), :method => :post %>
+          <% end %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 

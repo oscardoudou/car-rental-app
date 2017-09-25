@@ -14,7 +14,8 @@ class Reservation < ApplicationRecord
   end
 
   def have_reservation?
-    check_reservation = Reservation.find_by_user_id(self.user_id)
+    #check_reservation = Reservation.where(:user_id => self.user_id, :status => ["reserved", "checkedout"])
+    check_reservation = Reservation.find_by_user_id_and_status(self.user_id, ["reserved", "checkedout"])
     if !check_reservation.nil?
       errors.add(:id, "you have unfinished reservation")
     end
