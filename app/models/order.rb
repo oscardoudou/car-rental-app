@@ -1,5 +1,4 @@
 class Order < ApplicationRecord
-  has_many :line_items, :dependent =>  :destroy
   PAYMENT_TYPES =["Check","Credit card","Purchase order"]
 =begin
   def add_line_items_from_reservation(reservation)
