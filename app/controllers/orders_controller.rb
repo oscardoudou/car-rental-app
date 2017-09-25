@@ -10,6 +10,7 @@ class OrdersController < ApplicationController
         @orders = Order.all
       else
         @orders=Order.where(:email => current_user.email)
+        #@orders=Order.where(:user_id => current_user.id)
       end
     else
       @orders=[]

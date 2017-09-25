@@ -9,7 +9,7 @@ class ReservationsController < ApplicationController
       if current_user.admin?
         @reservations = Reservation.all
       else
-        @reservations=Reservation.where(:email => current_user.email)
+        @reservations=Reservation.where(:user_id => current_user.id)
       end
     else
       @reservations=[]
