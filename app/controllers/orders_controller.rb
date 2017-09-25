@@ -29,6 +29,7 @@ class OrdersController < ApplicationController
 
     if params.key?(:reservation_id)
     reservation = Reservation.find(params[:reservation_id])
+    #reservation.status = 'checkout'
     @order.reservation_id = reservation.id
     @order.name = reservation.name
     @order.car_id = reservation.car_id
@@ -36,7 +37,10 @@ class OrdersController < ApplicationController
     @order.address = reservation.address
     else
       @order.reservation_id = 2500
-      render "orders/new"
+      @order.real_checkout_time = Time.now
+      car = Car.find(params[:car_id])
+      @order.car_id = car.id
+     # render "orders/new"
     end
 
       respond_to do |format|
@@ -54,7 +58,14 @@ class OrdersController < ApplicationController
   def create
 
     @order = Order.new(order_params)
-    #reservation = Reservation.find(@order.reservation_id)
+
+    if @order.reservation_id != 2500
+    reservation = Reservation.find(@order.reservation_id)
+    else
+      @order.return_time = @order.real_checkout_time+Integer(order_params[:return_time]).hours
+    end
+
+    @order.status = 'checked out'
     # @order = Order.new(order_params)
     # @order.add_line_items_from_reservation(current_reservation)
     #@order.name= '12345'
@@ -63,9 +74,13 @@ class OrdersController < ApplicationController
     #@order.address=reservation.address
     #@order.email=reservation.email
     #@order.status='checked out'
+    #@order.real_checkout_time = Time.now
+    #end
 
     respond_to do |format|
       if @order.save
+        #reservation.update_attribute('status', 'checkedout')   #update_attr 方法限制长度？
+        ##reservation.update_attribute('status','checkout')
         # Reservation.destroy(session[:reservation_id])
         # session[:reservation_id]=nil
         format.html { redirect_to store_url, notice: 'Thank you for your order.' }
@@ -79,7 +94,6 @@ class OrdersController < ApplicationController
       end
     end
   end
-
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
@@ -112,6 +126,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id )
+      params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id , :tel ,:real_checkout_time,:return_time)
     end
 end

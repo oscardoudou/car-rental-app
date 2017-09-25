@@ -1,5 +1,30 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <strong>Order Status:</strong>
+  <%= @order.status %>
+</p>
+
+<p>
+  <strong>User ID:</strong>
+  <%= @order.user_id %>
+</p>
+
+<%if @order.reservation_id == 2500%>
+<p>
+  <strong>Checkout Time:</strong>
+  <%= @order.real_checkout_time %>
+</p>
+<%end%>
+
+<%if @order.reservation_id == 2500%>
+<p>
+  <strong>Return Time:</strong>
+  <%= @order.return_time %>
+</p>
+<%end%>
+
 <p>
   <strong>Name:</strong>
   <%= @order.name %>
@@ -19,6 +44,13 @@
   <strong>Email:</strong>
   <%= @order.email %>
 </p>
+
+<%if @order.reservation_id == 2500%>
+<p>
+  <strong>Tel:</strong>
+  <%= @order.tel %>
+</p>
+<%end%>
 
 <p>
   <strong>Pay type:</strong>
