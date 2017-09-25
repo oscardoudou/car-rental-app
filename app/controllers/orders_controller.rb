@@ -4,13 +4,13 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+    @user=User.all
     @orders = Order.all
     if logged_in?
       if current_user.admin?
         @orders = Order.all
       else
-        @orders=Order.where(:email => current_user.email)
-        #@orders=Order.where(:user_id => current_user.id)
+        @orders=Order.where(:user_id => current_user.id)
       end
     else
       @orders=[]
