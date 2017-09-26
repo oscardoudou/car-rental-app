@@ -56,6 +56,6 @@
   <strong>Pay type:</strong>
   <%= @order.pay_type %>
 </p>
-
+<%= button_to 'Cancel order', @order, :method => :delete, data: {confirm: 'Are you sure?'} %>
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
