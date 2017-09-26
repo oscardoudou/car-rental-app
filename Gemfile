@@ -57,3 +57,12 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 source 'https://rubygems.org'
 
 gem 'bcrypt','3.1.11'
+
+gem 'figaro'
+group :development do
+  gem 'capistrano'
+  gem 'capistrano3-puma'
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rvm'
+end

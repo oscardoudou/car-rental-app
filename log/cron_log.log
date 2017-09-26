@@ -1,0 +1,20 @@
+/Users/cshao/.rvm/gems/ruby-2.4.0/gems/bundler-1.16.0.pre.2/lib/bundler/dsl.rb:109:in `gem':  (Bundler::Dsl::DSLError)
+[!] There was an error parsing `Gemfile`: You cannot specify the same gem twice with different version requirements.
+You specified: puma (~> 3.7) and puma (>= 0). Bundler cannot continue.
+
+ #  from /Users/cshao/Desktop/rental/Gemfile:62
+ #  -------------------------------------------
+ #  gem 'figaro'
+ >  gem 'puma'
+ #  group :development do
+ #  -------------------------------------------
+	from /Users/cshao/Desktop/rental/Gemfile:62:in `eval_gemfile'
+	from /Users/cshao/.rvm/gems/ruby-2.4.0/gems/bundler-1.16.0.pre.2/lib/bundler/dsl.rb:47:in `instance_eval'
+	from /Users/cshao/.rvm/gems/ruby-2.4.0/gems/bundler-1.16.0.pre.2/lib/bundler/dsl.rb:47:in `eval_gemfile'
+	from /Users/cshao/.rvm/gems/ruby-2.4.0/gems/bundler-1.16.0.pre.2/lib/bundler/dsl.rb:12:in `evaluate'
+	from /Users/cshao/.rvm/gems/ruby-2.4.0/gems/bundler-1.16.0.pre.2/lib/bundler/definition.rb:36:in `build'
+	from /Users/cshao/.rvm/gems/ruby-2.4.0/gems/bundler-1.16.0.pre.2/lib/bundler.rb:135:in `definition'
+	from /Users/cshao/.rvm/gems/ruby-2.4.0/gems/bundler-1.16.0.pre.2/lib/bundler.rb:101:in `setup'
+	from /Users/cshao/.rvm/gems/ruby-2.4.0/gems/bundler-1.16.0.pre.2/lib/bundler/setup.rb:20:in `<top (required)>'
+	from /Users/cshao/.rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /Users/cshao/.rvm/rubies/ruby-2.4.0/lib/ruby/site_ruby/2.4.0/rubygems/core_ext/kernel_require.rb:55:in `require'

@@ -40097,3 +40097,1489 @@ Completed 200 OK in 47ms (Views: 43.2ms | ActiveRecord: 0.4ms)
   [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 10:52:03 -0400' and status = 'reserved')[0m
   [1m[35mSQL (2.6ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 10:54:03 -0400' and reservations.status = 'reserved'))[0m
   [1m[35mSQL (19.3ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 10:54:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 10:56:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 10:56:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 10:58:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 10:58:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:00:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:00:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:02:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:02:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:04:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:04:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:06:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:06:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:08:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:08:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:10:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:10:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:12:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:12:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:14:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:14:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:16:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:16:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:18:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:18:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:20:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:20:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:22:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:22:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:24:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:24:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:26:05 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:26:05 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:28:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:28:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:30:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:30:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:32:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:32:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:34:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:34:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:36:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:36:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:38:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:38:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:40:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:40:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:42:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:42:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:44:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:44:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:46:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:46:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:48:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:48:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:50:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:50:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:52:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:52:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:54:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:54:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:56:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:56:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 11:58:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 11:58:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:00:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:00:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:02:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:02:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:04:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:04:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:06:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:06:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:08:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:08:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:10:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:10:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:12:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:12:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:14:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:14:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:16:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:16:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:18:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:18:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:20:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:20:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:22:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:22:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:54:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:54:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:56:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:56:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 12:58:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 12:58:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:00:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:00:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:02:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:02:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:04:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:04:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:06:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:06:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:08:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:08:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:10:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:10:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:12:25 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:12:25 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:14:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:14:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:16:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:16:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:18:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:18:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:20:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:20:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:22:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:22:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:24:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:24:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:26:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:26:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:28:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:28:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:30:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:30:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:32:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:32:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:34:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:34:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:36:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:36:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:38:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:38:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:40:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:40:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:42:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:42:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:44:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:44:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:46:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:46:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:48:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:48:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:50:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:50:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:52:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:52:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:56:58 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:56:58 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 13:58:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 13:58:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:00:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:00:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:02:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:02:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:04:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:04:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:06:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:06:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:08:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:08:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:10:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:10:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:12:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:12:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:14:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:14:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:16:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:16:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:18:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:18:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:20:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:20:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:22:29 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:22:30 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:24:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:24:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:33:38 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:33:38 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:34:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:34:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:36:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:36:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:38:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:38:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:40:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:40:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:42:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:42:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:44:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:44:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:46:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:46:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:50:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:50:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:52:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:52:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:54:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:54:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:56:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:56:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 14:58:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 14:58:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:00:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:00:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:02:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:02:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:04:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:04:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:06:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:06:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:08:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:08:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:10:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:10:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:12:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:12:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:14:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:14:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:16:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:16:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:18:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:18:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:20:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:20:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:22:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:22:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:24:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:24:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:26:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:26:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:28:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:28:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:30:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:30:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:32:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:32:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:34:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:34:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.7ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:36:08 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:36:08 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.9ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:38:05 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:38:05 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:40:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:40:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:42:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:42:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:44:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:44:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (2.6ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:46:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:46:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:48:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:48:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:50:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:50:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:52:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:52:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:54:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:54:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:56:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:56:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 15:58:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 15:58:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:00:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:00:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:02:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:02:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:04:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:04:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:06:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:06:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:08:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:08:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:10:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:10:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:12:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:12:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:14:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:14:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:16:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:16:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:18:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:18:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:20:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:20:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:22:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:22:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 16:24:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 16:24:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:28:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:28:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:30:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:30:04 -0400' and status = 'reserved')[0m
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:00:23 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (1.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (445.8ms)
+Completed 200 OK in 634ms (Views: 596.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:00:27 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 57ms (Views: 41.0ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/orders/new" for 127.0.0.1 at 2017-09-25 19:00:31 -0400
+Processing by OrdersController#new as HTML
+  Parameters: {"authenticity_token"=>"QSCGt0vQ6a+ihJXMRs199/cKch1QFw1Rcc8uw2Suk2gzP5+jxN/MOEc64YRab8qRmD/hOi9ZvlgqqDakvCTMKA=="}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Car with 'id'=):
+  
+app/controllers/orders_controller.rb:41:in `new'
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:00:41 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/orders/new?car_id=2" for 127.0.0.1 at 2017-09-25 19:00:44 -0400
+Processing by OrdersController#new as HTML
+  Parameters: {"authenticity_token"=>"VJxMkPHD3isDwolOKV8KAqEh2JKJmCM0dErqyzU5gXYmg1WEfsz7vOZ8/QY1/b1kzhRLtfbWkD0vLfKs7bPeNg==", "car_id"=>"2"}
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (39.1ms)
+  Rendered orders/new.html.erb within layouts/application (41.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 79.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:00:52 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 37.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:00:55 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 62ms (Views: 57.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/reservations/new?car_id=2" for 127.0.0.1 at 2017-09-25 19:00:56 -0400
+Processing by ReservationsController#new as HTML
+  Parameters: {"authenticity_token"=>"c6Rae+oaMpJpML9Y6DCCYFo2dEWc6Z64L+PIiTv4o6GqD+Nj5aVEGTXvxZSrjepdB2p1fnOq3BZ0l88poBr5pw==", "car_id"=>"2"}
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering reservations/new.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered reservations/_form.html.erb (10.6ms)
+  Rendered reservations/new.html.erb within layouts/application (16.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 44.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:00:58 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.6ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (24.1ms)
+Completed 200 OK in 65ms (Views: 56.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/10" for 127.0.0.1 at 2017-09-25 19:01:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 59ms (Views: 43.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:01:04 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 86ms (Views: 81.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:01:05 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (1.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered reservations/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 55ms (Views: 46.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:01:07 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:02:04 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 89ms (Views: 85.8ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:32:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:32:06 -0400' and status = 'reserved')[0m
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:02:29 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/orders/new?car_id=4" for 127.0.0.1 at 2017-09-25 19:02:43 -0400
+Processing by OrdersController#new as HTML
+  Parameters: {"authenticity_token"=>"UuMVvuJNVQtPzRqm/aDKVt0IQnobha8ebkaxgi6ws/87+pYG4ua0NqFMScPI1yn0kHdb/DZgZ6BlDtaiXY2Gyg==", "car_id"=>"4"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (11.3ms)
+  Rendered orders/new.html.erb within layouts/application (16.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 54.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2017-09-25 19:02:46 -0400
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PZ4YH9T5f6n3bgHmLOk8OZypQm+sAFN9fag998AVVrRUh5un1FKelBnvUoMZnt+b0dZb6YHlm8N24FrXsyhjgQ==", "order"=>{"real_checkout_time(1i)"=>"2017", "real_checkout_time(2i)"=>"9", "real_checkout_time(3i)"=>"25", "real_checkout_time(4i)"=>"19", "real_checkout_time(5i)"=>"02", "return_time"=>"1", "tel"=>"", "name"=>"", "car_id"=>"4", "email"=>"", "address"=>"", "reservation_id"=>"2500", "pay_type"=>"Check"}, "commit"=>"Confirm Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "orders" ("name", "address", "email", "pay_type", "created_at", "updated_at", "car_id", "status", "reservation_id", "real_checkout_time", "return_time") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["address", ""], ["email", ""], ["pay_type", "Check"], ["created_at", "2017-09-25 23:02:46.917210"], ["updated_at", "2017-09-25 23:02:46.917210"], ["car_id", 4], ["status", "checked out"], ["reservation_id", 2500], ["real_checkout_time", "2017-09-25 23:02:00"], ["return_time", "2017-09-26 00:02:00"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:02:46 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (53.6ms)
+Completed 200 OK in 102ms (Views: 96.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:02:55 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered reservations/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 51ms (Views: 43.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:02:56 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 47ms (Views: 38.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:02:59 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered reservations/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 39.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:03:06 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 47ms (Views: 40.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:03:07 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 92ms (Views: 87.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:03:12 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 58ms (Views: 49.9ms | ActiveRecord: 3.2ms)
+
+
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:34:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:34:08 -0400' and status = 'reserved')[0m
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:05:54 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 92ms (Views: 79.6ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:06:04 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:36:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:36:07 -0400' and status = 'reserved')[0m
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:06:34 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 55ms (Views: 46.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:06:40 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 54ms (Views: 47.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:06:41 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 51ms (Views: 45.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:06:41 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 51ms (Views: 46.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:06:42 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered reservations/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 47ms (Views: 37.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:06:45 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 48ms (Views: 41.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/orders/34" for 127.0.0.1 at 2017-09-25 19:07:03 -0400
+Processing by OrdersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"afj+prgH4YeVa1FXEwhMcW8/DWQxw8V/pQEbszmo42EA4X0euKwAunvqAjImf6/TIkAU4hwmDcGuSXyTSpXWVA==", "id"=>"34"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 34]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/orders
+Completed 302 Found in 12ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:07:03 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 35.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:07:06 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (1.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 70ms (Views: 61.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:07:09 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:07:12 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 56ms (Views: 52.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:07:15 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 51ms (Views: 46.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/orders/new?car_id=4" for 127.0.0.1 at 2017-09-25 19:07:20 -0400
+Processing by OrdersController#new as HTML
+  Parameters: {"authenticity_token"=>"jCSnmoLnGSwbu31aaE6cm4A/xc2u8EA3IxF++qNG0KjlPSQigkz4EfU6Lj9dOX85zUDcS4MViIkoWRna0HvlnQ==", "car_id"=>"4"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (29.9ms)
+  Rendered orders/new.html.erb within layouts/application (34.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 86ms (Views: 80.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2017-09-25 19:07:35 -0400
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sg+wUJC1A94DWpEuCPl2roIKYCHmexp764S0IlKt4m8jFjPokB7i4+3bwks9jpUMz3V5p8ue0sXgzNMCIZDXWg==", "order"=>{"real_checkout_time(1i)"=>"2017", "real_checkout_time(2i)"=>"9", "real_checkout_time(3i)"=>"25", "real_checkout_time(4i)"=>"19", "real_checkout_time(5i)"=>"07", "return_time"=>"1", "tel"=>"", "name"=>"", "car_id"=>"2", "email"=>"", "address"=>"", "reservation_id"=>"2500", "pay_type"=>"Check"}, "commit"=>"Confirm Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("name", "address", "email", "pay_type", "created_at", "updated_at", "car_id", "status", "reservation_id", "real_checkout_time", "return_time") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["address", ""], ["email", ""], ["pay_type", "Check"], ["created_at", "2017-09-25 23:07:35.564918"], ["updated_at", "2017-09-25 23:07:35.564918"], ["car_id", 2], ["status", "checked out"], ["reservation_id", 2500], ["real_checkout_time", "2017-09-25 23:07:00"], ["return_time", "2017-09-26 00:07:00"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:07:35 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 71ms (Views: 65.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:07:37 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 54ms (Views: 48.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:07:40 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:07:40 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:07:41 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (2.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 10]]
+  Rendered reservations/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 56ms (Views: 44.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:07:42 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 55ms (Views: 48.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:07:42 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 51ms (Views: 46.2ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:38:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:38:04 -0400' and status = 'reserved')[0m
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:08:06 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 98ms (Views: 91.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/orders/new?car_id=4" for 127.0.0.1 at 2017-09-25 19:08:09 -0400
+Processing by OrdersController#new as HTML
+  Parameters: {"authenticity_token"=>"Ud9xc/xmGojTNjyo6jS9fqnp2Kwj2prRcB+h52de2AcjwGhnc2k/HzaISOD2lgoYxtxLi1yUKdgreLmAv9SHRw==", "car_id"=>"4"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (11.0ms)
+  Rendered orders/new.html.erb within layouts/application (16.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 54.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:09:40 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 45ms (Views: 37.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:09:42 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 69ms (Views: 62.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:10:03 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 82ms (Views: 76.0ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:40:05 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:40:05 -0400' and status = 'reserved')[0m
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:10:06 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (1.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (2.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 114ms (Views: 101.4ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/reservations/new?car_id=4" for 127.0.0.1 at 2017-09-25 19:10:09 -0400
+Processing by ReservationsController#new as HTML
+  Parameters: {"authenticity_token"=>"rf6Q5V4E3+r7srQPQ1S6/XOviHUOS2kT24FXYqQuIP90VSn9UbupYadtzsMA6dLALvOJTuEIK72A9VDCP8x6+Q==", "car_id"=>"4"}
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering reservations/new.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered reservations/_form.html.erb (6.1ms)
+  Rendered reservations/new.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 43.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/orders/new?car_id=4" for 127.0.0.1 at 2017-09-25 19:10:11 -0400
+Processing by OrdersController#new as HTML
+  Parameters: {"authenticity_token"=>"IQwKaEtAvAoOiWhZMvA1FvATW4NCCsIQYlXYAKVKjEhIFYnQS+tdN+AIOzwHh9a0vWxCBW/vCq5pHb8g1ne5fQ==", "car_id"=>"4"}
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT  "cars".* FROM "cars" WHERE "cars"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (8.3ms)
+  Rendered orders/new.html.erb within layouts/application (12.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 43.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2017-09-25 19:10:14 -0400
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yDOUoRIlVenBamFf8b3ae+A2CP9eZP01FR2RlI5r/g6hKhcZEo601C/rMjrEyjnZrUkReXOBNYseVfa0/VbLOw==", "order"=>{"real_checkout_time(1i)"=>"2017", "real_checkout_time(2i)"=>"9", "real_checkout_time(3i)"=>"25", "real_checkout_time(4i)"=>"19", "real_checkout_time(5i)"=>"10", "return_time"=>"1", "tel"=>"", "name"=>"", "car_id"=>"4", "email"=>"", "address"=>"", "reservation_id"=>"2500", "pay_type"=>"Check"}, "commit"=>"Confirm Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "orders" ("name", "address", "email", "pay_type", "created_at", "updated_at", "car_id", "status", "reservation_id", "real_checkout_time", "return_time") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["address", ""], ["email", ""], ["pay_type", "Check"], ["created_at", "2017-09-25 23:10:14.127523"], ["updated_at", "2017-09-25 23:10:14.127523"], ["car_id", 4], ["status", "checked out"], ["reservation_id", 2500], ["real_checkout_time", "2017-09-25 23:10:00"], ["return_time", "2017-09-26 00:10:00"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:10:14 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.8ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 75ms (Views: 70.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:10:16 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 47ms (Views: 40.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:10:17 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 44ms (Views: 38.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:10:18 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:10:18 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 54ms (Views: 49.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:10:18 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."email" = ?[0m  [["email", "xiaobb@xx.com"]]
+  Rendered orders/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 49.1ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:42:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:42:03 -0400' and status = 'reserved')[0m
+Started DELETE "/logout" for 127.0.0.1 at 2017-09-25 19:12:22 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6wT4ECrP0mgRqYm2++qvOPcwjNrMe1n40ZQhvA+9E2JBU7PgEtKk8d0VJlC7jvy1bX9CyYy/hqReQsU1uF/lLg=="}
+Redirected to http://localhost:3000/store/index
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/store/index" for 127.0.0.1 at 2017-09-25 19:12:22 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (28.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 57.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-25 19:12:25 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-09-25 19:12:32 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jh6AIxXyPaK1EfycPUZmB2VrL5KEjH8Yc5xFSpHAOE15jSP/tA7j9fQjvbNTvbf5t7TeptXMufaH38tV53WOWQ==", "session"=>{"email"=>"1@1", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "1@1"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 81ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2017-09-25 19:12:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 24.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:12:33 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 63ms (Views: 54.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-09-25 19:12:42 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 30.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:44:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:44:03 -0400' and status = 'reserved')[0m
+Started GET "/signup" for 127.0.0.1 at 2017-09-25 19:14:13 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered users/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 63ms (Views: 55.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:46:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:46:04 -0400' and status = 'reserved')[0m
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:17:38 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 91ms (Views: 74.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-09-25 19:17:45 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered users/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 59ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-25 19:17:46 -0400
+Processing by StoreController#index as HTML
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.7ms)[0m  [1m[34mSELECT "cars".* FROM "cars" ORDER BY created_at ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (37.8ms)
+Completed 200 OK in 71ms (Views: 63.3ms | ActiveRecord: 1.5ms)
+
+
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:48:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:48:06 -0400' and status = 'reserved')[0m
+Started GET "/?utf8=%E2%9C%93&search1=Raleigh&search2=&search3=&search4=&search5=" for 127.0.0.1 at 2017-09-25 19:18:08 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search1"=>"Raleigh", "search2"=>"", "search3"=>"", "search4"=>"", "search5"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.5ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (location LIKE '%Raleigh%' and model LIKE '%%' and manufactor LIKE '%%' and style LIKE '%%' and status LIKE '%%') ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 154ms (Views: 147.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search1=&search2=Civic&search3=&search4=&search5=" for 127.0.0.1 at 2017-09-25 19:18:15 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search1"=>"", "search2"=>"Civic", "search3"=>"", "search4"=>"", "search5"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (location LIKE '%%' and model LIKE '%Civic%' and manufactor LIKE '%%' and style LIKE '%%' and status LIKE '%%') ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search1=Raleigh&search2=Civic&search3=&search4=&search5=" for 127.0.0.1 at 2017-09-25 19:18:27 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search1"=>"Raleigh", "search2"=>"Civic", "search3"=>"", "search4"=>"", "search5"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (location LIKE '%Raleigh%' and model LIKE '%Civic%' and manufactor LIKE '%%' and style LIKE '%%' and status LIKE '%%') ORDER BY created_at DESC[0m
+  Rendered store/index.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search1=Duham&search2=Civic&search3=&search4=&search5=" for 127.0.0.1 at 2017-09-25 19:18:33 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search1"=>"Duham", "search2"=>"Civic", "search3"=>"", "search4"=>"", "search5"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (location LIKE '%Duham%' and model LIKE '%Civic%' and manufactor LIKE '%%' and style LIKE '%%' and status LIKE '%%') ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/?utf8=%E2%9C%93&search1=NewYork&search2=Civic&search3=&search4=&search5=" for 127.0.0.1 at 2017-09-25 19:18:40 -0400
+Processing by StoreController#index as HTML
+  Parameters: {"utf8"=>"✓", "search1"=>"NewYork", "search2"=>"Civic", "search3"=>"", "search4"=>"", "search5"=>""}
+  Rendering store/index.html.erb within layouts/application
+  [1m[36mCar Load (0.4ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCACHE Car Load (0.0ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars" WHERE (location LIKE '%NewYork%' and model LIKE '%Civic%' and manufactor LIKE '%%' and style LIKE '%%' and status LIKE '%%') ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered store/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 45.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:19:29 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (22.7ms)
+Completed 200 OK in 71ms (Views: 62.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:19:30 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 64ms (Views: 55.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:19:31 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 75ms (Views: 70.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:19:32 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 54ms (Views: 48.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:19:34 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:19:36 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 75ms (Views: 66.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2017-09-25 19:19:37 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  Rendered reservations/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 64ms (Views: 57.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2017-09-25 19:19:44 -0400
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 72ms (Views: 65.3ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:50:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:50:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:52:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:52:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:54:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:54:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:56:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:56:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 18:58:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 18:58:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:00:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:00:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:04:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:04:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:06:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:06:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:08:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:08:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:10:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:10:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:12:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:12:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:14:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:14:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:16:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:16:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:18:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:18:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:20:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:20:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:22:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:22:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:24:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:24:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:26:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:26:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:28:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:28:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:30:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:30:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:32:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:32:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:34:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:34:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:36:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:36:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:38:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:38:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:40:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:40:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:42:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:42:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:44:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:44:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:46:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:46:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:48:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:48:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:50:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:50:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:52:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:52:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:54:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:54:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:56:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:56:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 19:58:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 19:58:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 20:00:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 20:00:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 20:02:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 20:02:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 20:04:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 20:04:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 20:06:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 20:06:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 20:54:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 20:54:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 20:56:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 20:56:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 20:58:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 20:58:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:00:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:00:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:02:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:02:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:04:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:04:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:06:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:06:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:08:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:08:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:10:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:10:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:12:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:12:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:14:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:14:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:16:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:16:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:18:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:18:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:20:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:20:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:22:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:22:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:24:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:24:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:26:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:26:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:28:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:28:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:30:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:30:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:32:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:32:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:34:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:34:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:36:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:36:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:38:05 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:38:05 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:40:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:40:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:42:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:42:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:44:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:44:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:46:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:46:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:48:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:48:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:50:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:50:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:52:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:52:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:54:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:54:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:56:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:56:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 21:58:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 21:58:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:00:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:00:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:02:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:02:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:04:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:04:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:06:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:06:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:08:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:08:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:10:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:10:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:12:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:12:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:14:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:14:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:16:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:16:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:18:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:18:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:20:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:20:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:22:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:22:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:24:08 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:24:08 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:26:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:26:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:28:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:28:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:30:05 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:30:05 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:32:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:32:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:34:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:34:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:36:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:36:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:38:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:38:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:40:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:40:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:42:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:42:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:44:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:44:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:46:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:46:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:48:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:48:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:50:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:50:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:52:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:52:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:54:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:54:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:56:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:56:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 22:58:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 22:58:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:00:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:00:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:02:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:02:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:04:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:04:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:06:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:06:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:08:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:08:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:10:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:10:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:12:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:12:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:14:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:14:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:16:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:16:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:18:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:18:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:20:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:20:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:22:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:22:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:24:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:24:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:26:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:26:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:28:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:28:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:30:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:30:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:32:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:32:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:34:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:34:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:36:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:36:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:38:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:38:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:40:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:40:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:42:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:42:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:44:08 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:44:08 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:46:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:46:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:48:06 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:48:06 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:50:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:50:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:52:07 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:52:07 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:54:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:54:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:56:08 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:56:08 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-25 23:58:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-25 23:58:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:00:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:00:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:02:04 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:02:04 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:04:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:04:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:06:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:06:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:08:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:08:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:10:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:10:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:12:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:12:02 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:14:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:14:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:16:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:16:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:18:03 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:18:03 -0400' and status = 'reserved')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "cars" SET "status" = 'available' WHERE "cars"."id" IN (SELECT "cars"."id" FROM "cars" LEFT JOIN reservations on cars.id = reservations.car_id WHERE (reservations.checkout_time < '2017-09-26 00:20:02 -0400' and reservations.status = 'reserved'))[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "reservations" SET "status" = 'cancled' WHERE (checkout_time < '2017-09-26 00:20:02 -0400' and status = 'reserved')[0m
