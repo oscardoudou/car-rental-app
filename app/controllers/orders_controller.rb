@@ -9,8 +9,8 @@ class OrdersController < ApplicationController
       if current_user.admin?
         @orders = Order.all
       else
-        @orders=Order.where(:email => current_user.email)
-        #@orders=Order.where(:user_id => current_user.id)
+        #@orders=Order.where(:email => current_user.email)
+        @orders=Order.where(:user_id => current_user.id)
       end
     else
       @orders=[]
@@ -58,11 +58,15 @@ class OrdersController < ApplicationController
   def create
 
     @order = Order.new(order_params)
-
+    car = Car.find(@order.car_id)
     if @order.reservation_id != 2500
-    reservation = Reservation.find(@order.reservation_id)
+      reservation = Reservation.find(@order.reservation_id)
     else
       @order.return_time = @order.real_checkout_time+Integer(order_params[:return_time]).hours
+    end
+
+    if current_user != nil # 有必要判断吗？
+      @order.user_id = current_user.id
     end
 
     @order.status = 'checked out'
@@ -79,8 +83,9 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
+        car.update_attribute(:status, 'checked out')
         if @order.reservation_id != 2500
-        reservation.update_attribute(:status, 'checked out')
+          reservation.update_attribute(:status, 'checked out')
         end
         ##reservation.update_attribute('status','checkout')
         # Reservation.destroy(session[:reservation_id])
@@ -113,6 +118,12 @@ class OrdersController < ApplicationController
   # DELETE /orders/1
   # DELETE /orders/1.json
   def destroy
+    car = Car.find(@order.car_id)
+    car.update_attribute('status','availbale')
+    if @order.reservation_id != 2500
+      reservation = Reservation.find(@order.reservation_id)
+      reservation.update_attribute('status','reserved')
+    end
     @order.destroy
     respond_to do |format|
       format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
