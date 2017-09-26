@@ -48,12 +48,12 @@
     <%if @order.reservation_id == 2500%>
     <div class="field">
       <%= form.label :car_id %>
-      <%= form.text_field :car_id, id: :order_car_id %>
+      <%= form.text_field :car_id, id: :order_car_id,readonly: true %>
     </div>
     <%else%>
         <div class="field">
           <%= form.label :car_id %>
-          <%= form.text_field :car_id, id: :reservation_id %>
+          <%= form.text_field :car_id, id: :reservation_id ,readonly: true%>
         </div>
     <%end%>
 
