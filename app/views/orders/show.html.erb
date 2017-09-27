@@ -11,14 +11,14 @@
   <%= @order.user_id %>
 </p>
 
-<%if @order.reservation_id == 2500%>
+<%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
 <p>
   <strong>Checkout Time:</strong>
   <%= @order.real_checkout_time %>
 </p>
 <%end%>
 
-<%if @order.reservation_id == 2500%>
+<%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
 <p>
   <strong>Return Time:</strong>
   <%= @order.return_time %>
@@ -45,7 +45,7 @@
   <%= @order.email %>
 </p>
 
-<%if @order.reservation_id == 2500%>
+<%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
 <p>
   <strong>Tel:</strong>
   <%= @order.tel %>

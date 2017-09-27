@@ -11,14 +11,14 @@
         </div>
     <% end %>
 
-    <%if @order.reservation_id == 2500%>
+    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
         <div class="field">
           <%= form.label :real_checkout_time %>
           <%= form.datetime_select :real_checkout_time, id: :order_real_checkout_time, :default => { :hour => Time.now.hour, :minute => Time.now.min }%>
         </div>
     <%end%>
 
-    <%if @order.reservation_id == 2500%>
+    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
         <div class="field">
           <%= form.label :rental_period %>
           <%= form.select :return_time,  options_for_select([1,2,3,4,5,6,7,8,9,10],1), {:class => 'form-control', :prompt => ''}  %>
@@ -26,14 +26,14 @@
         </div>
     <%end%>
 
-    <%if @order.reservation_id == 2500%>
+    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
         <div class="field">
           <%= form.label :tel %>
           <%= form.text_field :tel, id: :order_tel %>
         </div>
     <%end%>
 
-    <%if @order.reservation_id == 2500%>
+    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
     <div class="field">
       <%= form.label :name %>
       <%= form.text_field :name, id: :order_id %>
@@ -45,7 +45,7 @@
     </div>
     <%end%>
 
-    <%if @order.reservation_id == 2500%>
+    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
     <div class="field">
       <%= form.label :car_id %>
       <%= form.text_field :car_id, id: :order_car_id,readonly: true %>
@@ -57,7 +57,7 @@
         </div>
     <%end%>
 
-    <%if @order.reservation_id == 2500%>
+    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
     <div class="field">
       <%= form.label :email%>
       <%= form.text_field :email, id: :order_id %>
@@ -69,7 +69,7 @@
         </div>
     <%end%>
 
-    <%if @order.reservation_id == 2500%>
+    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
     <div class="field">
       <%= form.label :address %>
       <%= form.text_field :address, id: :order_id %>
