@@ -1,6 +1,8 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
+  @@reservationid = Order::CHECKOUT_DIRECT_START_NO
+
   # GET /orders
   # GET /orders.json
   def index
@@ -36,7 +38,8 @@ class OrdersController < ApplicationController
     @order.email = reservation.email
     @order.address = reservation.address
     else
-      @order.reservation_id = 2500
+      @@reservationid += 1
+      @order.reservation_id = @@reservationid
       @order.real_checkout_time = Time.now
       car = Car.find(params[:car_id])
       @order.car_id = car.id
@@ -59,7 +62,7 @@ class OrdersController < ApplicationController
 
     @order = Order.new(order_params)
     car = Car.find(@order.car_id)
-    if @order.reservation_id != 2500
+    if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
       reservation = Reservation.find(@order.reservation_id)
     else
       @order.return_time = @order.real_checkout_time+Integer(order_params[:return_time]).hours
@@ -69,7 +72,7 @@ class OrdersController < ApplicationController
       @order.user_id = current_user.id
     end
 
-    @order.status = 'checked out'
+    @order.status = 'checkedout'
     # @order = Order.new(order_params)
     # @order.add_line_items_from_reservation(current_reservation)
     #@order.name= '12345'
@@ -83,9 +86,9 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
-        car.update_attribute(:status, 'checked out')
-        if @order.reservation_id != 2500
-          reservation.update_attribute(:status, 'checked out')
+        car.update_attribute(:status, 'checkedout')
+        if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
+          reservation.update_attribute(:status, 'checkedout')
         end
         ##reservation.update_attribute('status','checkout')
         # Reservation.destroy(session[:reservation_id])
@@ -119,8 +122,8 @@ class OrdersController < ApplicationController
   # DELETE /orders/1.json
   def destroy
     car = Car.find(@order.car_id)
-    car.update_attribute('status','availbale')
-    if @order.reservation_id != 2500
+    car.update_attribute('status','available')
+    if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
       reservation = Reservation.find(@order.reservation_id)
       reservation.update_attribute('status','reserved')
     end
