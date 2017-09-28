@@ -26,7 +26,7 @@
 
   <tbody>
   <% @cars.each do |car| %>
-      <tr>
+      <td>
         <td><%= car.title %></td>
         <td><%= truncate(strip_tags(car.description), :length => 100) %></td>
         <td><%= image_tag(car.image_url, :class => 'list_image', :size => '150x100') %></td>
@@ -50,8 +50,13 @@
         <%#:status, :license_plate, :model, :manufactor, style, :location %>
 
         <td><%= link_to 'Show', car %></td>
+        <td><%if logged_in?%></td>
+
+
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
         <td><%= link_to 'Destroy', car, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                    
+          <td><%end%></td>
       </tr>
   <% end %>
   </tbody>
