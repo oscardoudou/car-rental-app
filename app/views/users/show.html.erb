@@ -6,5 +6,8 @@
         <%=link_to "all admins",adminl_index_path%>
         <%elsif current_user.sadmin?%>
         <%=link_to"all superadmins",sadminl_index_path%>
+        <%=link_to "all admins",adminl_index_path%>
+        <%=link_to"all user",users_path%>
+
 <%end%>
 <%end%>

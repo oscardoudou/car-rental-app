@@ -8,7 +8,7 @@
 set :environment, :development
 set :output, "log/cron_log.log"
 
-every 1.minute do
+every 30.minute do
   # puts "cd-------------#############测试"
    rake "cancel_reservation_30mins"
 end
