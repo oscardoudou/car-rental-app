@@ -6,9 +6,9 @@ Need to login to use all the functions
 
 There are three type of users.
 
-superadmin 1@1  password:1  
-admin      2@2  password:2  
-user       8@8  password:8
+superadmin dafu@gg.com password:dd  
+admin      xiaohuang@gg.com password:xx  
+user       wangcai@gg.com  password:ww
 
 superadmin: when logging in as a superadmin, can use signup button on the left to create users and admins and will be directly logged in into the created account.  
 
