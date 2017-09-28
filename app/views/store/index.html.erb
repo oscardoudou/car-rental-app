@@ -4,7 +4,7 @@
 
 <%##Search cars using location or model or manufacturer or style or status%>
 <%= form_tag(store_path, :method => "get", id: "search-form") do %>
-    <%= 'Locatoin ' %><%= select_tag :search1, options_from_collection_for_select(Car.all.to_a.uniq {|o| o.location}, :location, :location), {:class => 'form-control', :prompt => ''} %>
+    <%= 'Location ' %><%= select_tag :search1, options_from_collection_for_select(Car.all.to_a.uniq {|o| o.location}, :location, :location), {:class => 'form-control', :prompt => ''} %>
     <%= 'Model ' %><%= select_tag :search2, options_from_collection_for_select(Car.all.to_a.uniq {|o| o.model}, :model, :model), {:class => 'form-control', :prompt => ''} %>
     <%= 'Manufactor ' %><%= select_tag :search3, options_from_collection_for_select(Car.all.to_a.uniq {|o| o.manufactor}, :manufactor, :manufactor), {:class => 'form-control', :prompt => ''} %>
     <%# <%= 'Model ' %><%#<%= text_field_tag :search2, params[:search2], placeholder: "Search Model" %>
