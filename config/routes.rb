@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
+  get 'users/show'
+
   resources :orders
   resources :line_items
   resources :reservations

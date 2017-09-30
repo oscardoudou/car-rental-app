@@ -18,6 +18,10 @@ module SessionsHelper
     user == current_user
   end
   def adminu?
-    current_user.admin?
-    end
+    current_user.admin? && !current_user.sadmin?
+  end
+
+  def sadminu?
+    current_user.admin? && current_user.sadmin?
+  end
 end

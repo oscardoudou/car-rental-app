@@ -1,13 +1,14 @@
-<%=@user.name%><%=@user.email%>
-<%=link_to "edit", edit_user_path(current_user)%>
-<%if logged_in?%>
-  <%if current_user.admin? && !current_user.sadmin?%>
-    <%=link_to"all user",users_path%>
-        <%=link_to "all admins",adminl_index_path%>
-        <%elsif current_user.sadmin?%>
-        <%=link_to"all superadmins",sadminl_index_path%>
-        <%=link_to "all admins",adminl_index_path%>
-        <%=link_to"all user",users_path%>
+<h1>Information</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
 
+<p>
+<strong>Email:</strong>
+<%= @user.email %>
+</p>
+<%if !@user.sadmin? && !@user.admin?%>
+    <%=link_to "edit", edit_user_path(current_user)%>
 <%end%>
-<%end%>
+<%=link_to 'back',sadminl_index_path%>

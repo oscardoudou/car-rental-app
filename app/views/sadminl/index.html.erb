@@ -1,12 +1,22 @@
 <% provide(:title, 'All superadmins') %>
 <h1>All superadmins</h1>
 
-<ul class="users">
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>email</th>
+    <th colspan ="1"></th>
+  </tr>
+  </thead>
+<tbody>
   <% @users.each do |user| %>
-      <li>
-            <%= link_to user.name%>
-            <%= link_to user.email%>
-
-      </li>
+<tr>
+        <td><%=user.name%></td>
+        <td><%=user.email%></td>
+        <td><%=link_to'show',user%>
   <% end %>
-</ul>
+  </td>
+  </tr>
+</tbody>
+</table>

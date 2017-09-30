@@ -15,22 +15,30 @@
   <div id="columns">
     <div id="side">
       <%=link_to "Home", store_index_path%><br />
-     <%if logged_in?%>
-      <%= link_to "Cars", cars_path%><br/>
+
+     <%if !logged_in?%>
+          <%=link_to "Sign up", signup_path%><br />
+          <%=link_to "login", login_path%><br />
+          <%else%>
+
       <%= link_to "Reservations", reservations_path%><br/>
       <%= link_to "Orders", orders_path%><br/>
       <%= link_to "Profile", current_user%><br/>
       <%= button_to "Log out", logout_path, :method=> :delete %><br/>
           <%if adminu?%>
-          <%=link_to "Create admin", signup_path%><br />
+              <%= link_to "Cars", cars_path%><br/>
+              <%=link_to"all user",users_path%><br/>
+              <%=link_to "all admins",adminl_index_path%><br/>
+              <%=link_to "Create admin", signup_path%><br />
+
+          <%elsif sadminu?%>
+              <%= link_to "Cars", cars_path%><br/>
+              <%=link_to"all user",users_path%><br/>
+              <%=link_to "all admins",adminl_index_path%><br/>
+              <%=link_to"all superadmins",sadminl_index_path%><br/>
+              <%=link_to "Create admin", signup_path%><br/>
               <%end%>
-          <%else%>
-
-          <%=link_to "Sign up", signup_path%><br />
-          <%=link_to "login", login_path%><br />
           <%end%>
-
-
     </div>
     <div id="main">
     <%= yield %>
