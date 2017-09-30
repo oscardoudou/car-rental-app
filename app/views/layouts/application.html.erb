@@ -14,18 +14,18 @@
   </div>
   <div id="columns">
     <div id="side">
-
+      <%=link_to "Home", store_index_path%><br />
      <%if logged_in?%>
       <%= link_to "Cars", cars_path%><br/>
       <%= link_to "Reservations", reservations_path%><br/>
       <%= link_to "Orders", orders_path%><br/>
       <%= link_to "Profile", current_user%><br/>
       <%= button_to "Log out", logout_path, :method=> :delete %><br/>
-          <%if @user.admin?%>
+          <%if adminu?%>
           <%=link_to "Create admin", signup_path%><br />
               <%end%>
           <%else%>
-          <%=link_to "Home", store_index_path%><br />
+
           <%=link_to "Sign up", signup_path%><br />
           <%=link_to "login", login_path%><br />
           <%end%>
