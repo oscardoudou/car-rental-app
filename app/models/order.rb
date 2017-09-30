@@ -6,8 +6,32 @@ class Order < ApplicationRecord
   validate :have_order?
 
   validate :have_reservation?
+
+  validate :after_reserve_30?
+
+  validate :before_checkout_30?
+
+  def before_checkout_30?
+   #if self.reservation_id < CHECKOUT_DIRECT_START_NO #checkout directly also fall in same situation
+     #reservation = Reservation.find(self.reservation_id)
+    if self.real_checkout_time < self.checkout_time - 30.minutes
+       errors.add(:id,"Checkout too early. Your could only checkout 30min early.")
+       # there is a bug here if
+    end
+  end
+
+  def after_reserve_30? #here reserve actually refer to checkout time
+    #if self.reservation_id < CHECKOUT_DIRECT_START_NO
+      #reservation = Reservation.find(self.reservation_id)
+      if self.real_checkout_time > self.checkout_time + 30.minutes
+        errors.add(:id,"Reserve expired after 30min. Your should reserve again.")
+        # sth else should be add
+      end
+  end
+
   def have_order?
     check_order = Order.find_by_user_id_and_status(self.user_id,["checkedout"])
+    #judge statemnent should refine,now edit is unavailable cause this validation
     unless check_order.nil?
       errors.add(:id, "you have unfinished order")
     end

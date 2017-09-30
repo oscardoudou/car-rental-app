@@ -37,10 +37,13 @@ class OrdersController < ApplicationController
     @order.car_id = reservation.car_id
     @order.email = reservation.email
     @order.address = reservation.address
+    @order.return_time = reservation.return_time
+   # @order.checkout_time = reservation.checkout_time ## should be written here but I move it into create,more info see create
+      #view corresponding form should be read only
     else
       @@reservationid += 1
       @order.reservation_id = @@reservationid
-      @order.real_checkout_time = Time.now
+     # @order.real_checkout_time = Time.now
       car = Car.find(params[:car_id])
       @order.car_id = car.id
      # render "orders/new"
@@ -62,10 +65,12 @@ class OrdersController < ApplicationController
 
     @order = Order.new(order_params)
     car = Car.find(@order.car_id)
+    @order.real_checkout_time = Time.now
     if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
       reservation = Reservation.find(@order.reservation_id)
+      @order.checkout_time = reservation.checkout_time # still dont know why should add this line as it should not be here, database refresh is slow may be the reason
     else
-      @order.return_time = @order.real_checkout_time+Integer(order_params[:return_time]).hours
+      @order.return_time = @order.checkout_time+Integer(order_params[:return_time]).hours
     end
 
     if current_user != nil # 有必要判断吗？
@@ -142,6 +147,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id , :tel ,:real_checkout_time,:return_time)
+      params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id , :tel ,:real_checkout_time,:return_time,:checkout_time)
     end
 end
