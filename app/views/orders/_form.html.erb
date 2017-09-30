@@ -13,8 +13,8 @@
 
     <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
         <div class="field">
-          <%= form.label :real_checkout_time %>
-          <%= form.datetime_select :real_checkout_time, id: :order_real_checkout_time, :default => { :hour => Time.now.hour, :minute => Time.now.min }%>
+        <%= form.label :checkout_time %>
+        <%= form.datetime_select :checkout_time, id: :order_checkout_time, :default => { :hour => Time.now.hour, :minute => Time.now.min }%>
         </div>
     <%end%>
 
