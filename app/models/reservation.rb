@@ -6,6 +6,8 @@ class Reservation < ApplicationRecord
 
   validate :after_current?, :on => :create
 
+  validate :after_current?, :on => :update
+
   validate :have_reservation?, :on => :create
 
 #  validate :have_related_order?, :on => :destroy
