@@ -38,7 +38,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     car = Car.find(@reservation.car_id)
     #change car status to reserved
-    @reservation.reserve_time = Time.now
+    @reservation.reserve_time = Time.zone.now
     # period = @reservation.return_time
     @reservation.return_time = @reservation.checkout_time+Integer(reservation_params[:return_time]).hours
 
