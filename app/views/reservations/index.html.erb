@@ -24,9 +24,9 @@
         <td><font size=2><%= reservation.user_id %></td>
         <td><font size=2><%= reservation.car_id %></td>
         <td><font size=2><%= reservation.status %></td>
-        <td><font size=2><%= reservation.reserve_time %></td>
-        <td><font size=2><%= reservation.checkout_time %></td>
-        <td><font size=2><%= reservation.return_time %></td>
+        <td><font size=2><%= reservation.reserve_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <td><font size=2><%= reservation.checkout_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <td><font size=2><%= reservation.return_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
         <td><font size=2><%= reservation.name %></td>
         <td><font size=2><%= link_to 'Show', reservation %></td>
         <td><font size=2><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
