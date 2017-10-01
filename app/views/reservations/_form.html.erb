@@ -17,7 +17,7 @@
 
     <div class="field">
       <%= form.label :checkout_time %>
-      <%= form.datetime_select :checkout_time, id: :checkout_time, :default => { :hour => (Time.now.hour+1)%24, :minute => 0 }%>
+      <%= form.datetime_select :checkout_time, id: :checkout_time, :default => { :hour => (Time.zone.now.hour+1)%24, :minute => 0 }%>
     </div>
 
 
