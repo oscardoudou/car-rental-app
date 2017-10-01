@@ -13,9 +13,9 @@ class CreateOrders < ActiveRecord::Migration[5.1]
       t.integer :reservation_id
       t.integer :tel
       t.string :status
-      t.date :real_return_time
-      t.date :real_checkout_time
-      t.date :return_time
+      t.timestamp :real_return_time
+      t.timestamp :real_checkout_time
+      t.timestamp :return_time
 
 
 

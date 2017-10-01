@@ -9,9 +9,9 @@ class CreateReservations < ActiveRecord::Migration[5.1]
       t.integer :user_id
       t.integer :tel
       t.string :status
-      t.date :reserve_time
-      t.date :checkout_time
-      t.date :return_time
+      t.timestamp :reserve_time
+      t.timestamp :checkout_time
+      t.timestamp :return_time
 
       t.timestamps
     end
