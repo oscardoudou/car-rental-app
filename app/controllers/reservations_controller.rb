@@ -63,6 +63,7 @@ class ReservationsController < ApplicationController
   def confirm
     respond_to do |format|
       if @reservation.update(reservation_params)
+        printf (reservation_params[:id])
         format.html {redirect_to @reservation, notice: 'Reservation was successfully updated.'}
         format.json {render :show, status: :ok, location: @reservation}
       else
@@ -75,10 +76,14 @@ class ReservationsController < ApplicationController
   # PATCH/PUT /reservations/1
   # PATCH/PUT /reservations/1.json
   def update
-    #added by scc 20170917
+    #added by scc 20170917  +Integer(reservation_params[:return_time]).hours
+
 
     respond_to do |format|
       if @reservation.update(reservation_params)
+
+        @reservation.update_attribute('return_time', @reservation.checkout_time+Integer(reservation_params[:return_time]).hours)
+
         format.html {redirect_to @reservation, notice: 'Reservation was successfully updated.'}
         format.json {render :show, status: :ok, location: @reservation}
       else
