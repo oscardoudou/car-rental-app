@@ -5,7 +5,7 @@ task :cancel_reservation_30mins => :environment do
   end
 
   begin
-    Reservation.where("checkout_time < ? and status = ?", ( Time.now.getutc-5.minutes).to_s, 'reserved').update_all(:status => 'cancled')
+    Reservation.where("checkout_time < ? and status = ?", ( Time.now.getutc-30.minutes).to_s, 'reserved').update_all(:status => 'cancled')
   end
 
 
