@@ -27,11 +27,11 @@
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <%#<td>
-          <<% if order.status == 'checked out'%>
-              <%# <%= button_to 'Return', order, method: :delete, data: { confirm: 'Are you sure?' } %>
-         <%# <% end %>
-          <%#</td>%>
+        <td>
+          <% if order.status == 'checkedout'%>
+              <%= button_to 'Return', order_path(order), :method => :patch %>
+          <% end %>
+        </td>%>
       </tr>
     <% end %>
   </tbody>

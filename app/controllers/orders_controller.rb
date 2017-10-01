@@ -112,14 +112,24 @@ class OrdersController < ApplicationController
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
+    @order = Order.find(params[:id])
+    @order.update_attribute('status','returned')
+    @order.update_attribute('real_return_time',Time.now)
+    car = Car.find(@order.car_id)
+    car.update_attribute('status','available')
+    if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
+    reservation = Reservation.find(@order.reservation_id)
+    reservation.update_attribute('status','returned')
+    end
     respond_to do |format|
-      if @order.update(order_params)
-        format.html { redirect_to @order, notice: 'Order was successfully updated.' }
+      #if @order.save
+   #   if @order.update(order_params)
+        format.html { redirect_to @order, notice: 'Order was successfully returned.' }
         format.json { render :show, status: :ok, location: @order }
-      else
-        format.html { render :edit }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
-      end
+     # else
+       # format.html { render :edit }
+        #format.json { render json: @order.errors, status: :unprocessable_entity }
+      #end
     end
   end
 
@@ -149,4 +159,5 @@ class OrdersController < ApplicationController
     def order_params
       params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id , :tel ,:real_checkout_time,:return_time,:checkout_time)
     end
+
 end
