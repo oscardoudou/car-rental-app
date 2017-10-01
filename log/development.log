@@ -43726,3 +43726,12 @@ Processing by ReservationsController#show as HTML
 Completed 200 OK in 33ms (Views: 27.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/reservations" for 127.0.0.1 at 2017-10-01 17:13:16 -0400
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 14]]
+  Rendered reservations/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 0.6ms)
+
+
