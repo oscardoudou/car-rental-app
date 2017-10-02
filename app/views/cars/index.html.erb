@@ -54,7 +54,11 @@
 
 
         <td><%= link_to 'Edit', edit_car_path(car) %></td>
+              <%if car.status=='checkedout'%>
+                  <td><%= link_to 'Destroy',store_index_path%></td>
+                  <%else%>
         <td><%= link_to 'Destroy', car, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+                  <%end%>
                     
           <td><%end%></td>
       </tr>

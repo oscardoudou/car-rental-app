@@ -2,29 +2,18 @@
 
 This is a car rent system.
 
-Need to login to use all the functions
+ALl the user functions are at the left og the page.
 
 There are three type of users.
 
-superadmin dafu@gg.com password:dd  
-admin      xiaohuang@gg.com password:xx  
-user       wangcai@gg.com  password:ww
+superadmin superadmin@x.com password:123456  
+admin      admin@x.com password:123456  
+user       customer@x.com  password:123456
 
-superadmin: when logging in as a superadmin, can use signup button on the left to create users and admins and will be directly logged in into the created account.  
+When you sign up or create an admin or superamin, you'll be loggined in that user account immediately. If you want to use last user account,please log out and relogin.  
+If you try to delete a user who still has a pending reservation, then the system will warn you. However, if you still delete it.The record will remain.  
 
-Can view superadmins and admins by using profile button. Can edit and delete admins and users.
-Have the total function the same as admins
-
-admin: Can create users and admins the same way as superamins.  
-Can see all the reservations and orders.  
-Can see and manage all users and admins.   
-Can see all the reservations and orders by profile button.
-
-
-users: Can login and logout.Can reserve a car and checkout a car  
-Can see and edit his own file  ,reservations and orders by "profile" button.
-        
-
+If you try to delete a car which has been checked_out, the system would not allow it and take you back to homepage.  
 
 cars
 

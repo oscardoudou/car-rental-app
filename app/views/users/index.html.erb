@@ -18,10 +18,15 @@
 
        <td> <%=user.name%></td>
        <td><%=user.email%></td>
+       <%@reservation=Reservation.where(:user_id=>current_user.id)%>
         <% if current_user.admin?%>
            <td><%=link_to "show",user_path(user)%></td>
            <td><%=link_to "edit",edit_user_path(user)%></td>
+           <%if @reservation != nil%>
+               <td><%= link_to "delete", user, method: :delete, data: { confirm: "You sure?This user still has a reservation." } %></td>
+               <%else%>
            <td><%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %></td>
+               <%end%>
         <% end %>
 
 
