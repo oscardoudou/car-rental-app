@@ -1,6 +1,6 @@
 class Reservation < ApplicationRecord
 
-  has_one :order, dependent: :destroy
+  has_one :order#, dependent: :destroy
 
   validates :user_id, presence: true
 
@@ -12,7 +12,7 @@ class Reservation < ApplicationRecord
 
 #  validate :have_related_order?, :on => :destroy
 
-#  before_destroy :have_related_order?
+  before_destroy :have_related_order?
 
   def after_current?
     return if checkout_time.blank?
@@ -29,14 +29,20 @@ class Reservation < ApplicationRecord
     end
   end
 
-  #def have_related_order?
-    # check_order = Order.find_by_reservation_id(self.id)
-    # if !check_order.nil?
-      #if (check_order.reservation_id.eql ==self.id)
-        #errors.add(:base, "You have related order, you should destroy the order first")
-        #return false
-      #end
-    # end
-  #end
+  def have_related_order?
+    check_order = Order.find_by_reservation_id(self.id)
+    #printf "++++++++++++++++++++++++++"
+    #printf check_order.reservation_id
+    if check_order.nil?
+      return true
+    else
+      #printf "**************************"
+      raise ActiveRecord::Rollback
+      errors.add(:base, 'There are unfinished orders--')
+      return false
+    end
+  end
+
+
 
 end

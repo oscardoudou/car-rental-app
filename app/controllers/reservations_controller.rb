@@ -96,16 +96,22 @@ class ReservationsController < ApplicationController
   # DELETE /reservations/1
   # DELETE /reservations/1.json
   def destroy
-    #@reservation = current_reservation
-    car = Car.find(@reservation.car_id)
-    #free the car to available
-    car.update_attribute('status', 'available')
-    @reservation.destroy
     session[:reservation_id] = nil
     respond_to do |format|
-      format.html {redirect_to store_url, notice: 'Reservation is canceled.'}
-      format.json {head :no_content}
+      if @reservation.destroy
+        #@reservation = current_reservation
+        car = Car.find(@reservation.car_id)
+        #free the car to available
+        car.update_attribute('status', 'available')
+        format.html {redirect_to store_url, notice: 'Reservation is canceled.'}
+        format.json {head :no_content}
+      else
+        format.html {redirect_to reservations_url, notice: 'There are unfinished orders, failed.'}
+        format.json {render json: @reservation.errors, status: :unprocessable_entity}
+      end
     end
+
+
   end
 
   private

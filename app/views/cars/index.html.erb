@@ -5,9 +5,10 @@
 <table>
   <thead>
   <tr>
+    <th>ID</th>
     <th>Title</th>
-    <th>Description</th>
-    <th>Image</th>
+    <!--<th>Description</th>-->
+    <!--<th>Image</th>-->
     <th>Price</th>
     <%#:status, :license_plate, :model, :manufactor, style, :location %>
 
@@ -26,42 +27,43 @@
 
   <tbody>
   <% @cars.each do |car| %>
-      <td>
-        <td><%= car.title %></td>
-        <td><%= truncate(strip_tags(car.description), :length => 100) %></td>
-        <td><%= image_tag(car.image_url, :class => 'list_image', :size => '150x100') %></td>
-        <td><%= car.price %></td>
 
-        <%#:status, :license_plate, :model, :manufactor, style, :location %>
-        <td><%= car.status %></td>
+      <td><%= car.id %></td>
+      <td><%= car.title %></td>
+      <!--<td><%= truncate(strip_tags(car.description), :length => 100) %></td>-->
+      <!--<td><%= image_tag(car.image_url, :class => 'list_image', :size => '150x100') %></td>-->
+      <td><%= car.price %></td>
 
-        <% if (car.status == 'reserved' and Reservation.find_by(car_id:car.id, status:'reserved') != nil) %>
-            <td><%= Reservation.find_by(car_id:car.id, status:'reserved').name %></td>
-        <% else %>
-            <td></td>
-        <% end %>
+      <%#:status, :license_plate, :model, :manufactor, style, :location %>
+      <td><%= car.status %></td>
 
-        <td><%= car.license_plate %></td>
-        <td><%= car.model %></td>
-        <td><%= car.manufactor %></td>
-        <td><%= car.style %></td>
-        <td><%= car.location %></td>
+      <% if (car.status == 'reserved' and Reservation.find_by(car_id:car.id, status:'reserved') != nil) %>
+          <td><%= Reservation.find_by(car_id:car.id, status:'reserved').name %></td>
+      <% else %>
+          <td></td>
+      <% end %>
 
-        <%#:status, :license_plate, :model, :manufactor, style, :location %>
+      <td><%= car.license_plate %></td>
+      <td><%= car.model %></td>
+      <td><%= car.manufactor %></td>
+      <td><%= car.style %></td>
+      <td><%= car.location %></td>
 
-        <td><%= link_to 'Show', car %></td>
-        <td><%if logged_in?%></td>
+      <%#:status, :license_plate, :model, :manufactor, style, :location %>
+
+      <td><%= link_to 'Show', car %></td>
+      <td><%if logged_in?%></td>
 
 
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-              <%if car.status=='checkedout'%>
-                  <td><%= link_to 'Destroy',store_index_path%></td>
-                  <%else%>
-        <td><%= link_to 'Destroy', car, method: :delete, data: {confirm: 'Are you sure?'} %></td>
-                  <%end%>
-                    
-          <td><%end%></td>
-      </tr>
+            <td><%= link_to 'Edit', edit_car_path(car) %></td>
+            <%# <%if car.status=='checkedout'%>
+            <%# <td><%= link_to 'Destroy',store_index_path%></td>
+            <%#<%else%>
+            <td><%= link_to 'Destroy', car, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+            <%#<%end%>
+
+            <td><%end%></td>
+        </tr>
   <% end %>
   </tbody>
 </table>

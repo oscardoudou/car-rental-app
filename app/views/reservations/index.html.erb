@@ -20,17 +20,17 @@
   <tbody>
   <% @reservations.each do |reservation| %>
       <tr>
-        <td><font size=2><%= reservation.id %></td>
-        <td><font size=2><%= reservation.user_id %></td>
-        <td><font size=2><%= reservation.car_id %></td>
-        <td><font size=2><%= reservation.status %></td>
-        <td><font size=2><%= reservation.reserve_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
-        <td><font size=2><%= reservation.checkout_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
-        <td><font size=2><%= reservation.return_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
-        <td><font size=2><%= reservation.name %></td>
-        <td><font size=2><%= link_to 'Show', reservation %></td>
-        <td><font size=2><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-        <td><font size=2><%= link_to 'Destroy', reservation, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= reservation.id %></td>
+        <td><%= reservation.user_id %></td>
+        <td><%= reservation.car_id %></td>
+        <td><%= reservation.status %></td>
+        <td><%= reservation.reserve_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <td><%= reservation.checkout_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <td><%= reservation.return_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <td><%= reservation.name %></td>
+        <td><%= link_to 'Show', reservation %></td>
+        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+        <td><%= link_to 'Destroy', reservation, method: :delete, data: {confirm: 'Are you sure?'} %></td>
         <td>
           <% if reservation.status == 'reserved' %>
               <%= button_to 'Checkout', new_order_path(:reservation_id => reservation.id), :method => :post %>

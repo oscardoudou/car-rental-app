@@ -58,13 +58,30 @@
 
 
 <h1>Rental History: </h1>
-<table>
+<table >
+  <thead>
+  <tr>
+    <th>Order_ID</th>
+    <th>Reservation_ID</th>
+    <!--<th>Description</th>-->
+    <!--<th>Image</th>-->
+    <th>Time</th>
+    <%#:status, :license_plate, :model, :manufactor, style, :location %>
+
+    <th>Name</th>
+    <th>Pay_type</th>
+    <th>Status</th>
+
+    <%#:status, :license_plate, :model, :manufactor, style, :location %>
+    <th colspan="4"></th>
+  </tr>
+  </thead>
   <tbody>
   <% @orders.each do |order| %>
       <tr>
         <td><%= order.id %></td>
         <td><%= order.reservation_id %></td>
-        <td><%= order.created_at %></td>
+        <td><%= order.created_at.strftime '%Y-%m-%d %H:%M:%S' %></td>
         <td><%= order.name %></td>
         <td><%= order.pay_type %></td>
         <td><%= order.status %></td>

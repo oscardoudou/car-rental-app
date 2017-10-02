@@ -56,10 +56,14 @@ class CarsController < ApplicationController
   # DELETE /cars/1
   # DELETE /cars/1.json
   def destroy
-    @car.destroy
     respond_to do |format|
-      format.html {redirect_to cars_url, notice: 'Car was successfully destroyed.'}
-      format.json {head :no_content}
+      if @car.destroy
+        format.html {redirect_to cars_url, notice: 'Car was successfully destroyed.'}
+        format.json {head :no_content}
+      else
+        format.html {redirect_to cars_url, notice: 'There unfinished reservations and orders, failed.'}
+        format.json {render json: @car.errors, status: :unprocessable_entity}
+      end
     end
   end
 
@@ -80,6 +84,6 @@ class CarsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def car_params
-    params.require(:car).permit(:title, :description, :image_url, :price, :status, :license_plate, :model, :manufactor, :style, :location )
+    params.require(:car).permit(:title, :description, :image_url, :price, :status, :license_plate, :model, :manufactor, :style, :location)
   end
 end
