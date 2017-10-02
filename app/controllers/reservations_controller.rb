@@ -106,7 +106,7 @@ class ReservationsController < ApplicationController
         format.html {redirect_to store_url, notice: 'Reservation is canceled.'}
         format.json {head :no_content}
       else
-        format.html {redirect_to reservations_url, notice: 'There are unfinished orders, failed.'}
+        format.html {redirect_to reservations_url, notice: 'There are related orders, please destroy order first.'}
         format.json {render json: @reservation.errors, status: :unprocessable_entity}
       end
     end

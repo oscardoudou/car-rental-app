@@ -57,15 +57,18 @@
 <%= link_to 'Back', cars_path %>
 
 
-<h1>Rental History: </h1>
-<table >
+<h1>Checkout History: </h1>
+<table>
   <thead>
   <tr>
     <th>Order_ID</th>
     <th>Reservation_ID</th>
     <!--<th>Description</th>-->
     <!--<th>Image</th>-->
-    <th>Time</th>
+    <th>Style</th>
+    <th>Model</th>
+    <th>CheckoutTime</th>
+    <th>ReturnTime</th>
     <%#:status, :license_plate, :model, :manufactor, style, :location %>
 
     <th>Name</th>
@@ -81,7 +84,19 @@
       <tr>
         <td><%= order.id %></td>
         <td><%= order.reservation_id %></td>
-        <td><%= order.created_at.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <td><%= @car.style %></td>
+        <td><%= @car.model %></td>
+
+        <td><%= order.real_checkout_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+
+
+        <% if !order.real_return_time.nil?  %>
+            <td><%= order.real_return_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <% else %>
+            <td><%= order.return_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <% end %>
+
+
         <td><%= order.name %></td>
         <td><%= order.pay_type %></td>
         <td><%= order.status %></td>
