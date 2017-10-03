@@ -100,9 +100,12 @@ class ReservationsController < ApplicationController
     respond_to do |format|
       if @reservation.destroy
         #@reservation = current_reservation
-        car = Car.find(@reservation.car_id)
+        car = Car.find_by_id(@reservation.car_id)
         #free the car to available
-        car.update_attribute('status', 'available')
+        if !car.nil?
+          car.update_attribute('status', 'available')
+        end
+        
         format.html {redirect_to store_url, notice: 'Reservation is canceled.'}
         format.json {head :no_content}
       else
