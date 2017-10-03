@@ -15,6 +15,7 @@
 
         <td><%=user.name%></td>
         <td><%=user.email%></td>
+        <td><%=link_to "show",user_path(user)%></td>
         <td><%=link_to "edit",edit_user_path(user)%></td>
             <%if !current_user?(user)%>
 

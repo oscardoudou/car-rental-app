@@ -23,7 +23,7 @@
            <td><%=link_to "show",user_path(user)%></td>
            <td><%=link_to "edit",edit_user_path(user)%></td>
            <%if @reservation != nil%>
-               <td><%= link_to "delete", user, method: :delete, data: { confirm: "You sure?This user still has a reservation." } %></td>
+               <td><%= link_to "delete", users_path,data: { confirm: "This user can not be delete since he still has an order" }%></td>
                <%else%>
            <td><%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %></td>
                <%end%>
