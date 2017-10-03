@@ -4,9 +4,9 @@ class Reservation < ApplicationRecord
 
   validates :user_id, presence: true
 
-  validate :after_current?, :on => :create
+  validate :after_current?, :on => [:create, :update]
 
-  validate :after_current?, :on => :update
+  #validate :after_current?, :on => :update
 
   validate :have_reservation?, :on => :create
 
