@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
+  match '/return/:id' => 'orders#return', :via => [:get]
+
   resources :orders
   resources :line_items
   resources :reservations
@@ -20,6 +22,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  #get 'return_order', to: 'orders#returncar'
 
   resources :cars
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

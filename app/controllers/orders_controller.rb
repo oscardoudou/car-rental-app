@@ -30,26 +30,26 @@ class OrdersController < ApplicationController
     @order = Order.new
 
     if params.key?(:reservation_id)
-    reservation = Reservation.find(params[:reservation_id])
-    #reservation.status = 'checkout'
-    @order.reservation_id = reservation.id
-    @order.name = reservation.name
-    @order.car_id = reservation.car_id
-    @order.email = reservation.email
-    @order.address = reservation.address
-    #@order.return_time = reservation.return_time
-   # @order.checkout_time = reservation.checkout_time ## should be written here but I move it into create,more info see create
+      reservation = Reservation.find(params[:reservation_id])
+      #reservation.status = 'checkout'
+      @order.reservation_id = reservation.id
+      @order.name = reservation.name
+      @order.car_id = reservation.car_id
+      @order.email = reservation.email
+      @order.address = reservation.address
+      #@order.return_time = reservation.return_time
+      # @order.checkout_time = reservation.checkout_time ## should be written here but I move it into create,more info see create
       #view corresponding form should be read only
     else
       @@reservationid += 1
       @order.reservation_id = @@reservationid
-     # @order.real_checkout_time = Time.now
+      # @order.real_checkout_time = Time.now
       car = Car.find(params[:car_id])
       @order.car_id = car.id
-     # render "orders/new"
+      # render "orders/new"
     end
 
-      respond_to do |format|
+    respond_to do |format|
       format.html
       format.xml {render :xml => @order}
     end
@@ -57,6 +57,23 @@ class OrdersController < ApplicationController
 
   # GET /orders/1/edit
   def edit
+    printf "***************************00000*************************"
+
+=begin
+    respond_to do |format|
+      if @order.update(order_params)
+
+      #  @reservation.update_attribute('return_time', @reservation.checkout_time+Integer(reservation_params[:return_time]).hours)
+
+        format.html {redirect_to @order, notice: 'Order was successfully updated.'}
+        format.json {render :show, status: :ok, location: @order}
+      else
+        format.html {render :edit}
+        format.json {render json: @order.errors, status: :unprocessable_entity}
+      end
+    end
+=end
+
   end
 
   # POST /orders
@@ -99,66 +116,101 @@ class OrdersController < ApplicationController
         ##reservation.update_attribute('status','checkout')
         # Reservation.destroy(session[:reservation_id])
         # session[:reservation_id]=nil
-        format.html { redirect_to store_url, notice: 'Thank you for your order.' }
+        format.html {redirect_to store_url, notice: 'Thank you for your order.'}
 
         #format.html { redirect_to (store_url, notice: 'Thank you for your order.' )}
         # format.html { redirect_to @order, notice: 'Order was successfully created.' }
-        format.json { render :show, status: :created, location: @order }
+        format.json {render :show, status: :created, location: @order}
       else
-        format.html { render :new }
-        format.json { render json: @order.errors, status: :unprocessable_entity }
+        format.html {render :new}
+        format.json {render json: @order.errors, status: :unprocessable_entity}
       end
     end
   end
+
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
+    printf "88888888888888888888888888888"
     @order = Order.find(params[:id])
-    @order.update_attribute('status','returned')
-    @order.update_attribute('real_return_time',Time.now)
+    #@order.update_attribute('status','returned')
+    #@order.update_attribute('real_return_time',Time.now)
     car = Car.find(@order.car_id)
-    car.update_attribute('status','available')
+    #car.update_attribute('status','available')
     if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
-    reservation = Reservation.find(@order.reservation_id)
-    reservation.update_attribute('status','returned')
+      #reservation = Reservation.find(@order.reservation_id)
+      #reservation.update_attribute('status','returned')
     end
+
     respond_to do |format|
       #if @order.save
-   #   if @order.update(order_params)
-        format.html { redirect_to @order, notice: 'Order was successfully returned.' }
-        format.json { render :show, status: :ok, location: @order }
-     # else
-       # format.html { render :edit }
-        #format.json { render json: @order.errors, status: :unprocessable_entity }
-      #end
+      #if !format.nil?
+
+      if @order.update(order_params)
+        format.html {redirect_to @order, notice: 'Order was successfully updated.'}
+        format.json {render :show, status: :ok, location: @order}
+      else
+        format.html {render :edit}
+        format.json {render json: @order.errors, status: :unprocessable_entity}
+      end
     end
   end
+
+
+  def return
+    printf "9999999999999999999999999999"
+
+    @order = Order.find(params[:id])
+    @order.update_attribute('status', 'returned')
+    @order.update_attribute('real_return_time', Time.now)
+    car = Car.find(@order.car_id)
+    car.update_attribute('status', 'available')
+    if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
+      reservation = Reservation.find(@order.reservation_id)
+      reservation.update_attribute('status', 'returned')
+    end
+
+    respond_to do |format|
+      #if @order.save
+      #@order.update(order_params)
+      format.html {redirect_to @order, notice: 'Order was successfully returned.'}
+      format.json {render :show, status: :ok, location: @order}
+
+    end
+  end
+
 
   # DELETE /orders/1
   # DELETE /orders/1.json
   def destroy
-    car = Car.find(@order.car_id)
-    car.update_attribute('status','available')
+    car = Car.find_by_id(@order.car_id)
+    if !car.nil? #如果车已经删了 就不再改车的状态了 防止报错
+      car.update_attribute('status', 'available')
+    end
+
     if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
-      reservation = Reservation.find(@order.reservation_id)
-      reservation.update_attribute('status','reserved')
+      if !car.nil?
+        reservation = Reservation.find(@order.reservation_id)
+        reservation.update_attribute('status', 'reserved')
+        car.update_attribute('status', 'reserved')
+      end
     end
     @order.destroy
     respond_to do |format|
-      format.html { redirect_to orders_url, notice: 'Order was successfully destroyed.' }
-      format.json { head :no_content }
+      format.html {redirect_to orders_url, notice: 'Order was successfully destroyed.'}
+      format.json {head :no_content}
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_order
-      @order = Order.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_order
+    @order = Order.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id , :tel ,:real_checkout_time,:return_time,:checkout_time)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def order_params
+    params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id, :tel, :real_checkout_time, :return_time, :checkout_time)
+  end
 
 end

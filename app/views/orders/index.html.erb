@@ -29,9 +29,10 @@
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td>
           <% if order.status == 'checkedout'%>
-              <%= button_to 'Return', order_path(order), :method => :patch %>
+             <%# <%= button_to 'Return', return_order_path(order), :method => :get %>
+            <%= link_to 'Return', controller:"orders", action:"return", id:order %>
           <% end %>
-        </td>%>
+        </td>
       </tr>
     <% end %>
   </tbody>

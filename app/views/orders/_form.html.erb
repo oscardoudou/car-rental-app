@@ -18,6 +18,17 @@
         </div>
     <%end%>
 
+    <div class="field">
+      <%= form.label :return_time %>
+      <%= form.datetime_select :return_time, id: :order_return_time, :default => { :hour => Time.now.hour, :minute => Time.now.min }%>
+    </div>
+
+        <div class="field">
+          <%= form.label :real_checkout_time %>
+          <%= form.datetime_select :real_checkout_time, id: :order_real_checkout_time, :default => { :hour => Time.now.hour, :minute => Time.now.min }%>
+        </div>
+
+
     <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
         <div class="field">
           <%= form.label :rental_period %>
@@ -31,17 +42,22 @@
           <%= form.label :tel %>
           <%= form.text_field :tel, id: :order_tel %>
         </div>
+    <%else%>
+        <div class="field">
+          <%= form.label :tel %>
+          <%= form.text_field :tel, id: :reservation_tel %>
+        </div>
     <%end%>
 
     <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
     <div class="field">
       <%= form.label :name %>
-      <%= form.text_field :name, id: :order_id %>
+      <%= form.text_field :name, id: :order_name %>
     </div>
     <%else%>
     <div class="field">
       <%= form.label :name %>
-      <%= form.text_field :name, id: :reservation_id %>
+      <%= form.text_field :name, id: :reservation_name %>
     </div>
     <%end%>
 
@@ -53,31 +69,31 @@
     <%else%>
         <div class="field">
           <%= form.label :car_id %>
-          <%= form.text_field :car_id, id: :reservation_id ,readonly: true%>
+          <%= form.text_field :car_id, id: :reservation_car_id ,readonly: true%>
         </div>
     <%end%>
 
     <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
     <div class="field">
       <%= form.label :email%>
-      <%= form.text_field :email, id: :order_id %>
+      <%= form.text_field :email, id: :order_email %>
     </div>
     <%else%>
         <div class="field">
           <%= form.label :email %>
-          <%= form.text_field :email, id: :reservation_id %>
+          <%= form.text_field :email, id: :reservation_email %>
         </div>
     <%end%>
 
     <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
     <div class="field">
       <%= form.label :address %>
-      <%= form.text_field :address, id: :order_id %>
+      <%= form.text_field :address, id: :order_address %>
     </div>
     <%else%>
         <div class="field">
           <%= form.label :address %>
-          <%= form.text_field :address, id: :reservation_id %>
+          <%= form.text_field :address, id: :reservation_address %>
         </div>
     <%end%>
 
