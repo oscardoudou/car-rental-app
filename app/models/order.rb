@@ -3,19 +3,19 @@ class Order < ApplicationRecord
   CHECKOUT_DIRECT_START_NO = 2501
   validates :user_id, presence: true
 
-  validate :have_order?
+  validate :have_order?, :on => :create
 
-  validate :have_reservation?
+  validate :have_reservation?, :on => :create#只在create时校验
 
-  validate :after_reserve_30?
+  validate :after_reserve_30?, :on => [:create, :update]
 
-  validate :before_checkout_30?
+  validate :before_checkout_30?, :on => [:create, :update]
 
   def before_checkout_30?
    #if self.reservation_id < CHECKOUT_DIRECT_START_NO #checkout directly also fall in same situation
      #reservation = Reservation.find(self.reservation_id)
-    if self.real_checkout_time < self.checkout_time - 30.minutes
-       errors.add(:id,"Checkout too early. Your could only checkout 30min early.")
+    if self.real_checkout_time < self.checkout_time - 24.hours
+       errors.add(:id,"Checkout too early. Your could only checkout 1 day early.")
        # there is a bug here if
     end
   end
