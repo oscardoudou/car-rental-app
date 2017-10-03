@@ -37,7 +37,7 @@ class OrdersController < ApplicationController
     @order.car_id = reservation.car_id
     @order.email = reservation.email
     @order.address = reservation.address
-    @order.return_time = reservation.return_time
+    #@order.return_time = reservation.return_time
    # @order.checkout_time = reservation.checkout_time ## should be written here but I move it into create,more info see create
       #view corresponding form should be read only
     else
@@ -68,6 +68,7 @@ class OrdersController < ApplicationController
     @order.real_checkout_time = Time.now
     if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
       reservation = Reservation.find(@order.reservation_id)
+      @order.return_time = reservation.return_time
       @order.checkout_time = reservation.checkout_time # still dont know why should add this line as it should not be here, database refresh is slow may be the reason
     else
       @order.return_time = @order.checkout_time+Integer(order_params[:return_time]).hours
