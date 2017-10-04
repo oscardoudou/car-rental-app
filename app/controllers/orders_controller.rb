@@ -37,6 +37,7 @@ class OrdersController < ApplicationController
       @order.reservation_id = reservation.id
       @order.name = reservation.name
       @order.car_id = reservation.car_id
+      @order.tel = reservation.tel
       @order.email = reservation.email
       @order.address = reservation.address
       #@order.return_time = reservation.return_time
@@ -74,7 +75,8 @@ class OrdersController < ApplicationController
       @order.return_time = reservation.return_time
       @order.checkout_time = reservation.checkout_time # still dont know why should add this line as it should not be here, database refresh is slow may be the reason
     else
-      @order.return_time = @order.checkout_time+Integer(order_params[:return_time]).hours
+      @order.checkout_time=@order.real_checkout_time
+      @order.return_time = @order.real_checkout_time+Integer(order_params[:return_time]).hours
     end
 
     if current_user != nil #
@@ -122,6 +124,8 @@ class OrdersController < ApplicationController
   # PATCH/PUT /orders/1.json
   def update
     @order = Order.find(params[:id])
+
+
     #@order.update_attribute('status','returned')
     #@order.update_attribute('real_return_time',Time.now)
     car = Car.find(@order.car_id)
@@ -136,6 +140,7 @@ class OrdersController < ApplicationController
       #if !format.nil?
 
       if @order.update(order_params)
+        @order.update_attribute('return_time', @order.checkout_time+Integer(order_params[:return_time]).hours)
         format.html {redirect_to @order, notice: 'Order was successfully updated.'}
         format.json {render :show, status: :ok, location: @order}
       else

@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  PAYMENT_TYPES =["Check","Credit card","Purchase order"]
+  PAYMENT_TYPES =["Check","Credit card","Cash"]
   CHECKOUT_DIRECT_START_NO = 2501
   validates :user_id, presence: true
 
@@ -15,7 +15,7 @@ class Order < ApplicationRecord
    #if self.reservation_id < CHECKOUT_DIRECT_START_NO #checkout directly also fall in same situation
      #reservation = Reservation.find(self.reservation_id)
     if self.real_checkout_time < self.checkout_time - 24.hours
-       errors.add(:id,"Checkout too early. Your could only checkout 1 day early.")
+       errors.add(:base,"Checkout too early. Your could only checkout 1 day early.")
        # there is a bug here if
     end
   end
@@ -24,7 +24,7 @@ class Order < ApplicationRecord
     #if self.reservation_id < CHECKOUT_DIRECT_START_NO
       #reservation = Reservation.find(self.reservation_id)
       if self.real_checkout_time > self.checkout_time + 30.minutes
-        errors.add(:id,"Reserve expired after 30min. Your should reserve again.")
+        errors.add(:base,"Reserve expired after 30min. Your should reserve again.")
         # sth else should be add
       end
   end
@@ -33,7 +33,7 @@ class Order < ApplicationRecord
     check_order = Order.find_by_user_id_and_status(self.user_id,["checkedout"])
     #judge statemnent should refine,now edit is unavailable cause this validation
     unless check_order.nil?
-      errors.add(:id, "you have unfinished order")
+      errors.add(:base, "You have unfinished order")
     end
   end
 
@@ -48,7 +48,7 @@ class Order < ApplicationRecord
     end
 
     if  !check_reservation.nil?
-      errors.add(:id, "you have unfinished reservation")
+      errors.add(:base, "You have unfinished reservation")
     end
   end
 end

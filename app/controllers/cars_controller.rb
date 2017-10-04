@@ -28,6 +28,11 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     @car.status = "available"
+
+    if @car.price.nil?
+      @car.price=0
+    end
+
     respond_to do |format|
       if @car.save
         format.html {redirect_to @car, notice: 'Car was successfully created.'}
