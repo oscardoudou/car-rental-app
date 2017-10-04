@@ -11,91 +11,98 @@
         </div>
     <% end %>
 
-    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
+    <% if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO %>
+        <% if sadminu? %>
+            <font color="red"><%= 'If you want to check out a car for an user please select the User ID, else you will check out the car for yourself' %></font>
+            <br>
+            <font color="red"><%= 'User ID' %></font>
+            <%= select_tag :selected_id, options_from_collection_for_select(User.all.to_a.uniq {|o| o.id}, :id, :id), {:class => 'form-control', :prompt => ''} %>
+            <br>
+            <br>
+        <% end %>
+
         <div class="field">
-        <%= form.label :checkout_time %>
-        <%= form.datetime_select :checkout_time, id: :order_checkout_time, :default => { :hour => Time.now.hour, :minute => Time.now.min }%>
+          <%= form.label :checkout_time %>
+          <%= form.datetime_select :checkout_time, id: :order_checkout_time, :default => {:hour => Time.now.hour, :minute => Time.now.min} %>
         </div>
-    <%end%>
+    <% end %>
 
     <div class="field">
       <%= form.label :return_time %>
-      <%= form.datetime_select :return_time, id: :order_return_time, :default => { :hour => Time.now.hour, :minute => Time.now.min }%>
+      <%= form.datetime_select :return_time, id: :order_return_time, :default => {:hour => Time.now.hour, :minute => Time.now.min} %>
     </div>
 
-        <div class="field">
-          <%= form.label :real_checkout_time %>
-          <%= form.datetime_select :real_checkout_time, id: :order_real_checkout_time, :default => { :hour => Time.now.hour, :minute => Time.now.min }%>
-        </div>
+    <div class="field">
+      <%= form.label :real_checkout_time %>
+      <%= form.datetime_select :real_checkout_time, id: :order_real_checkout_time, :default => {:hour => Time.now.hour, :minute => Time.now.min} %>
+    </div>
 
 
-    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
+    <% if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO %>
         <div class="field">
           <%= form.label :rental_period %>
-          <%= form.select :return_time,  options_for_select([1,2,3,4,5,6,7,8,9,10],1), {:class => 'form-control', :prompt => ''}  %>
+          <%= form.select :return_time, options_for_select([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 1), {:class => 'form-control', :prompt => ''} %>
           <%= form.label :hours %>
         </div>
-    <%end%>
+    <% end %>
 
-    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
+    <% if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO %>
         <div class="field">
           <%= form.label :tel %>
           <%= form.text_field :tel, id: :order_tel %>
         </div>
-    <%else%>
+    <% else %>
         <div class="field">
           <%= form.label :tel %>
           <%= form.text_field :tel, id: :reservation_tel %>
         </div>
-    <%end%>
+    <% end %>
 
-    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name, id: :order_name %>
-    </div>
-    <%else%>
-    <div class="field">
-      <%= form.label :name %>
-      <%= form.text_field :name, id: :reservation_name %>
-    </div>
-    <%end%>
-
-    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
-    <div class="field">
-      <%= form.label :car_id %>
-      <%= form.text_field :car_id, id: :order_car_id,readonly: true %>
-    </div>
-    <%else%>
+    <% if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO %>
         <div class="field">
-          <%= form.label :car_id %>
-          <%= form.text_field :car_id, id: :reservation_car_id ,readonly: true%>
+          <%= form.label :name %>
+          <%= form.text_field :name, id: :order_name %>
         </div>
-    <%end%>
+    <% else %>
+        <div class="field">
+          <%= form.label :name %>
+          <%= form.text_field :name, id: :reservation_name %>
+        </div>
+    <% end %>
 
-    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
-    <div class="field">
-      <%= form.label :email%>
-      <%= form.text_field :email, id: :order_email %>
-    </div>
-    <%else%>
+    <% if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO %>
+        <div class="field">
+          <%= form.hidden_field :car_id, id: :order_car_id, readonly: true %>
+        </div>
+    <% else %>
+        <div class="field">
+          <%= form.hidden_field :car_id, id: :reservation_car_id, readonly: true %>
+        </div>
+    <% end %>
+
+    <% if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO %>
+        <div class="field">
+          <%= form.label :email %>
+          <%= form.text_field :email, id: :order_email %>
+        </div>
+    <% else %>
         <div class="field">
           <%= form.label :email %>
           <%= form.text_field :email, id: :reservation_email %>
         </div>
-    <%end%>
+    <% end %>
 
-    <%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
-    <div class="field">
-      <%= form.label :address %>
-      <%= form.text_field :address, id: :order_address %>
-    </div>
-    <%else%>
+    <% if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO %>
+        <div class="field">
+          <%= form.label :address %>
+          <%= form.text_field :address, id: :order_address %>
+        </div>
+    <% else %>
         <div class="field">
           <%= form.label :address %>
           <%= form.text_field :address, id: :reservation_address %>
         </div>
-    <%end%>
+    <% end %>
 
     <div class="field">
       <%= form.label :reservation_id %>

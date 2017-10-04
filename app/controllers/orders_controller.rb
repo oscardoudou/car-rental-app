@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  include SessionsHelper
+
   before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   @@reservationid = Order::CHECKOUT_DIRECT_START_NO
@@ -75,8 +77,12 @@ class OrdersController < ApplicationController
       @order.return_time = @order.checkout_time+Integer(order_params[:return_time]).hours
     end
 
-    if current_user != nil # 有必要判断吗？
+    if current_user != nil #
       @order.user_id = current_user.id
+    end
+
+    if params[:selected_id]!='' and !params[:selected_id].nil?
+      @order.user_id=params[:selected_id]
     end
 
     @order.status = 'checkedout'
@@ -150,7 +156,7 @@ class OrdersController < ApplicationController
 
     #calculate the charge
     charge = ((@order.real_return_time-@order.real_checkout_time)/3600)*car.price
-    @order.update_attribute('charge',charge)
+    @order.update_attribute('charge', charge)
 
     if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
       reservation = Reservation.find(@order.reservation_id)
@@ -197,7 +203,7 @@ class OrdersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def order_params
-    params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id, :tel, :real_checkout_time, :return_time, :checkout_time)
+    params.require(:order).permit(:name, :address, :email, :pay_type, :reservation_id, :car_id, :tel, :real_checkout_time, :return_time, :checkout_time, :selected_id)
   end
 
 end
