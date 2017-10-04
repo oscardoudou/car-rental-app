@@ -47,8 +47,8 @@
     </div>
 
     <div class="field">
-      <%= form.label :image_url %>
-      <%= form.text_field :image_url, id: :car_image_url %>
+      
+      <%= form.hidden_field :image_url, id: :car_image_url, :readonly =>true, :value => 'logo.png' %>
     </div>
 
     <div class="field">

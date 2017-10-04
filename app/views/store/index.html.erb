@@ -21,11 +21,9 @@
 
 <% @cars.each do |car| %>
     <div class="entry">
-      <% if Rails.application.assets.find_asset(car.image_url) != nil %>
+
           <%= image_tag(car.image_url) %>
-      <% else %>
-          <%= image_tag('logo.png') %>
-      <% end %>
+
 
       <h3><%= car.title %></h3>
       <%= sanitize(car.description) %>
