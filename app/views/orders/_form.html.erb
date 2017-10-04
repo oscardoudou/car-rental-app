@@ -25,7 +25,7 @@
 
     <div class="field">
       <%= form.label :real_checkout_time %>
-      <%= form.datetime_select :real_checkout_time, id: :order_real_checkout_time, :default => {:hour => Time.now.hour, :minute => Time.now.min}, :disabled => true %>
+      <%= form.datetime_select :real_checkout_time, id: :order_real_checkout_time, :default => {:hour => Time.zone.now.hour, :minute => Time.zone.now.min}, :disabled => true %>
     </div>
 
 

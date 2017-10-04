@@ -69,7 +69,7 @@ class OrdersController < ApplicationController
 
     @order = Order.new(order_params)
     car = Car.find(@order.car_id)
-    @order.real_checkout_time = Time.now
+    @order.real_checkout_time = Time.zone.now
     if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
       reservation = Reservation.find(@order.reservation_id)
       @order.return_time = reservation.return_time
@@ -155,7 +155,7 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     car = Car.find(@order.car_id)
     @order.update_attribute('status', 'returned')
-    @order.update_attribute('real_return_time', Time.now)
+    @order.update_attribute('real_return_time', Time.zone.now)
     car.update_attribute('status', 'available')
 
 
