@@ -4,6 +4,7 @@
 <table>
   <thead>
   <tr>
+    <th>ID</th>
     <th>Name</th>
     <th>email</th>
     <th colspan ="2"></th>
@@ -13,13 +14,21 @@
   <% @users.each do |user| %>
       <tr>
 
+        <td><%=user.id%></td>
         <td><%=user.name%></td>
         <td><%=user.email%></td>
         <td><%=link_to "show",user_path(user)%></td>
         <td><%=link_to "edit",edit_user_path(user)%></td>
             <%if !current_user?(user)%>
 
-            <td><%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %></td>
+
+            <% if !Reservation.find_by_user_id(user.id).nil? or !@order=Order.find_by_user_id(user.id).nil? %>
+                <td><%= link_to "delete", users_path, data: {confirm: "This admin can not be delete since he still has an order"} %></td>
+            <% else %>
+                <td><%= link_to "delete", user, method: :delete, data: {confirm: "You sure?"} %></td>
+            <% end %>
+
+     
             <%end%>
             <%=yield%>
         <% end %>
