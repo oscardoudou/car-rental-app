@@ -4,43 +4,66 @@
 
 <table>
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th>Pay type</th>
-      <th>Car id</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>OrderID</th>
+    <th>CarID</th>
+    <th>Name</th>
+    <th>TEL</th>
+    <th>Email</th>
+    <th>Pay type</th>
+    <th>RealCheckoutTime</th>
+    <th>RealReturnTime</th>
+    <th>Status</th>
+    <th>Charge</th>
+    <th colspan="3"></th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @orders.each do |order| %>
+  <% @orders.each do |order| %>
       <tr>
+        <td><%= order.id %></td>
+        <td><%= order.car_id %></td>
         <td><%= order.name %></td>
-        <td><%= order.address %></td>
+        <td><%= order.tel %></td>
         <td><%= order.email %></td>
         <td><%= order.pay_type %></td>
-        <td><%= order.car_id %></td>
+
+
+
+        <% if !order.real_checkout_time.nil? %>
+            <td><%= order.real_checkout_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <% else %>
+            <td></td>
+        <% end %>
+
+
+        <% if !order.real_return_time.nil? %>
+            <td><%= order.real_return_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
+        <% else %>
+            <td><%= order.return_time.strftime '%Y-%m-%d %H:%M:%S' %><font color="red">(est)</font></td>
+        <% end %>
+
 
         <% if (order.status == 'returned') %>
             <td><font color="green"><%= order.status %></font></td>
         <% else %>
             <td><font color="red"><%= order.status %></font></td>
         <% end %>
-        
+
+        <td><%= order.charge %></td>
+
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: {confirm: 'Are you sure?'} %></td>
         <td>
-          <% if order.status == 'checkedout'%>
-             <%# <%= button_to 'Return', return_order_path(order), :method => :get %>
-            <%= link_to 'Return', controller:"orders", action:"return", id:order %>
+          <% if order.status == 'checkedout' %>
+              <%# <%= button_to 'Return', return_order_path(order), :method => :get %>
+              <%= link_to 'Return', controller: "orders", action: "return", id: order %>
           <% end %>
         </td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 

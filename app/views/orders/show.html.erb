@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Order ID:</strong>
+  <%= @order.id %>
+</p>
 
 <p>
-  <strong>Order Status:</strong>
-  <%= @order.status %>
+  <strong>Car_id:</strong>
+  <%= @order.car_id %>
 </p>
 
 <p>
@@ -11,29 +15,42 @@
   <%= @order.user_id %>
 </p>
 
-<%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
 <p>
   <strong>Checkout Time:</strong>
-  <%= @order.real_checkout_time %>
+  <%= @order.checkout_time %><font color="red">(est)</font>
 </p>
-<%end%>
 
-<%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
 <p>
   <strong>Return Time:</strong>
-  <%= @order.return_time %>
+  <%= @order.return_time %><font color="red">(est)</font>
 </p>
-<%end%>
+
+<p>
+  <strong>Real Checkout Time:</strong>
+  <%= @order.real_checkout_time %>
+</p>
+
+<p>
+  <strong>Real Return Time:</strong>
+  <%= @order.real_return_time %>
+</p>
+
+<p>
+  <strong>Order Status:</strong>
+  <%= @order.status %>
+</p>
+
+<p>
+  <strong>Charge:</strong>
+  <font color="red"><%= @order.charge %></font>
+</p>
+
 
 <p>
   <strong>Name:</strong>
   <%= @order.name %>
 </p>
 
-<p>
-  <strong>Car_id:</strong>
-  <%= @order.car_id %>
-</p>
 
 <p>
   <strong>Address:</strong>
@@ -45,12 +62,10 @@
   <%= @order.email %>
 </p>
 
-<%if @order.reservation_id >= Order::CHECKOUT_DIRECT_START_NO%>
 <p>
   <strong>Tel:</strong>
   <%= @order.tel %>
 </p>
-<%end%>
 
 <p>
   <strong>Pay type:</strong>

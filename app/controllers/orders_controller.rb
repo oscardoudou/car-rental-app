@@ -57,22 +57,6 @@ class OrdersController < ApplicationController
 
   # GET /orders/1/edit
   def edit
-    printf "***************************00000*************************"
-
-=begin
-    respond_to do |format|
-      if @order.update(order_params)
-
-      #  @reservation.update_attribute('return_time', @reservation.checkout_time+Integer(reservation_params[:return_time]).hours)
-
-        format.html {redirect_to @order, notice: 'Order was successfully updated.'}
-        format.json {render :show, status: :ok, location: @order}
-      else
-        format.html {render :edit}
-        format.json {render json: @order.errors, status: :unprocessable_entity}
-      end
-    end
-=end
 
   end
 
@@ -131,7 +115,6 @@ class OrdersController < ApplicationController
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
   def update
-    printf "88888888888888888888888888888"
     @order = Order.find(params[:id])
     #@order.update_attribute('status','returned')
     #@order.update_attribute('real_return_time',Time.now)
@@ -158,13 +141,17 @@ class OrdersController < ApplicationController
 
 
   def return
-    printf "9999999999999999999999999999"
-
     @order = Order.find(params[:id])
+    car = Car.find(@order.car_id)
     @order.update_attribute('status', 'returned')
     @order.update_attribute('real_return_time', Time.now)
-    car = Car.find(@order.car_id)
     car.update_attribute('status', 'available')
+
+
+    #calculate the charge
+    charge = ((@order.real_return_time-@order.real_checkout_time)/3600)*car.price
+    @order.update_attribute('charge',charge)
+
     if @order.reservation_id < Order::CHECKOUT_DIRECT_START_NO
       reservation = Reservation.find(@order.reservation_id)
       reservation.update_attribute('status', 'returned')
