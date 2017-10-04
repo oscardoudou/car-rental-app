@@ -23,17 +23,23 @@
         <td><%= reservation.id %></td>
         <td><%= reservation.user_id %></td>
         <td><%= reservation.car_id %></td>
-        <td><%= reservation.status %></td>
+
+        <% if (reservation.status == 'returned') %>
+            <td><font color="green"><%= reservation.status %></font></td>
+        <% else %>
+            <td><font color="red"><%= reservation.status %></font></td>
+        <% end %>
+
         <td><%= reservation.reserve_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
         <td><%= reservation.checkout_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
         <td><%= reservation.return_time.strftime '%Y-%m-%d %H:%M:%S' %></td>
         <td><%= reservation.name %></td>
         <td><%= link_to 'Show', reservation %></td>
         <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-        <td><%= link_to 'Destroy', reservation, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+        <td><%= link_to 'Cancel', reservation, method: :delete, data: {confirm: 'Are you sure?'} %></td>
         <td>
           <% if reservation.status == 'reserved' %>
-              <%= button_to 'Checkout', new_order_path(:reservation_id => reservation.id), :method => :post %>
+              <%= link_to 'Checkout', new_order_path(:reservation_id => reservation.id), :method => :post %>
           <% end %></td>
       </tr>
   <% end %>

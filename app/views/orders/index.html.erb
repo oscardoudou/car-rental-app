@@ -23,7 +23,13 @@
         <td><%= order.email %></td>
         <td><%= order.pay_type %></td>
         <td><%= order.car_id %></td>
-        <td><%= order.status%></td>
+
+        <% if (order.status == 'returned') %>
+            <td><font color="green"><%= order.status %></font></td>
+        <% else %>
+            <td><font color="red"><%= order.status %></font></td>
+        <% end %>
+        
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
