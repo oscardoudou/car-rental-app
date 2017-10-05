@@ -5,6 +5,10 @@ superadmin   superadmin@x.com password:123456
 admin        admin@x.com password:123456  
 user         customer@x.com  password:123456  
 
+Important:  
+If you want to create an admin,please mark the admin check out box.  
+If you create an admin or super admin,you will be IMMEDIATELY log into the new account.
+
 ************************************************************************************************************************
 Operation&Status:
 								
