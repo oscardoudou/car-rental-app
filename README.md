@@ -5,6 +5,9 @@ superadmin   superadmin@x.com password:123456
 admin        admin@x.com password:123456  
 user         customer@x.com  password:123456  
 
+The website is here:  
+https://agile-plateau-36400.herokuapp.com/store/index 
+
 Important:  
 If you want to create an admin,please mark the admin check out box.  
 If you create an admin or super admin,you will be IMMEDIATELY logged into the new account.
