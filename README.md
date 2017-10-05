@@ -9,9 +9,10 @@ user         customer@x.com  password:123456
 Operation&Status:
 								
                 New Car		    Confirm Reservation		   Check out		   Return									
-Car		       'available'	    'reserved'		           'checkedout'		   'available'								
-Reservation				        'reserved'		           'checkedout'		   'returned'								
-Order(Checkout)						                       'checkedout'		   'returned'
+    Car         'available'		'reserved'		           'checkedout'		   'available'									
+    Reservation            		'reserved'                 'checkedout'        'returned'									
+    Order(Checkout)                		                   'checkedout'		   'returned'									
+
 
 *If system cancel the reservation automatically(30 mins delay), the reservation status will be 'Canceled'.
 
@@ -34,6 +35,7 @@ You need to delete the related checkouts(orders) first.
 Others:
 
 All functions are at the left side of the page. They will change due to your login identity.
+
 An superadmin can rent a car for an user. Just check out the car directly and choose the user ID.
 
 
