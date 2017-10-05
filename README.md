@@ -17,6 +17,8 @@ If you try to delete a user who has a  pending reservation or unfinished check-o
 
 If you try to delete a car which has been checked_out and not returned, the system would not allow it and take you back to homepage.   
 
-An superadmin can rent a  car for an user.Admin can not.
+An superadmin can rent a  car for an user.Just checout and input the user ID  
+
+
 
 
