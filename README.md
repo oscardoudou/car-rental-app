@@ -20,14 +20,17 @@ Operation&Status:
 Scenarios:
 
 Scenario 1, Delete Car:
+
 You cannot delete a car with unfinished reservations or checkouts(orders) ('reserved' or 'checkedout'), the system will stop this operation and warn you.
 You need to finish the reservations and checkouts(orders) first. 
 
 Scenario 2, Delete User:
+
 You cannot delete a user who has reservations or checkouts(orders), the system will stop this operation and warn you.
 You need to delete the related reservations and checkouts(orders) first.
 
 Scenario 3, Delete Reservation:
+
 You cannot delete a reservation with checkouts(orders), the system will stop this operation and warn you.
 You need to delete the related checkouts(orders) first.
 
