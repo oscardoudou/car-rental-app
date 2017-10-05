@@ -8,10 +8,10 @@ user         customer@x.com  password:123456
 ************************************************************************************************************************
 Operation&Status:
 								
-                New Car		    Confirm Reservation		   Check out		   Return									
-    Car         'available'		'reserved'		           'checkedout'		   'available'									
-    Reservation            		'reserved'                 'checkedout'        'returned'									
-    Order(Checkout)                		                   'checkedout'		   'returned'									
+                 New Car         Confirm Reservation        Check out           Return									
+    Car          'available'     'reserved'                 'checkedout'        'available'									
+    Reservation                  'reserved'                 'checkedout'        'returned'									
+    Order(Checkout)                                         'checkedout'        'returned'									
 
 
 *If system cancel the reservation automatically(30 mins delay), the reservation status will be 'Canceled'.
