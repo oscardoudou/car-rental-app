@@ -42,6 +42,14 @@ You cannot delete a reservation with checkouts(orders), the system will stop thi
 You need to delete the related checkouts(orders) first.
 
 ************************************************************************************************************************
+Test:
+
+There is a test for model cars. 
+Please refer to: 
+test/fixtures/cars.yml 
+test/models/car_test.rb
+
+************************************************************************************************************************
 Others:
 
 All functions are at the left side of the page. They will change due to your login identity.
