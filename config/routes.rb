@@ -12,7 +12,6 @@ Rails.application.routes.draw do
   match '/return/:id' => 'orders#return', :via => [:get]
 
   resources :orders
-  resources :line_items
   resources :reservations
   resources :users
   get 'store/index'
