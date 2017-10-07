@@ -218,3 +218,75 @@
   [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "line_items"[0m
   [1m[35m (2.4ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cars"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "cars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "image_url" varchar, "price" decimal(8,2), "status" varchar, "license_plate" varchar, "model" varchar, "manufactor" varchar, "style" varchar, "location" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reservation_id" integer, "car_id" integer, "user_id" integer, "name" varchar, "tel" integer, "address" text, "email" varchar, "pay_type" varchar, "status" varchar, "checkout_time" datetime, "return_time" datetime, "real_checkout_time" datetime, "real_return_time" datetime, "charge" decimal(8,2), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "reservations"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" text, "email" varchar, "car_id" integer, "user_id" integer, "tel" integer, "status" varchar, "reserve_time" datetime, "checkout_time" datetime, "return_time" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "admin" boolean DEFAULT 'f', "sadmin" boolean DEFAULT 'f')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170923134014)[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170916211740),
+(20170917020725),
+(20170917123250),
+(20170922192547),
+(20170922225233),
+(20170923013042);
+
+[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2017-10-07 18:02:32.959338"], ["updated_at", "2017-10-07 18:02:32.959338"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (1.1ms)[0m  [1m[31mDELETE FROM "cars"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "cars" ("title", "description", "image_url", "price", "license_plate", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, 'XX00001', '2017-10-07 18:02:33.080243', '2017-10-07 18:02:33.080243', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "cars" ("title", "description", "image_url", "price", "license_plate", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 9.99, 'XX00002', '2017-10-07 18:02:33.080243', '2017-10-07 18:02:33.080243', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "orders"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("name", "address", "email", "pay_type", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', '2017-10-07 18:02:33.084540', '2017-10-07 18:02:33.084540', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("name", "address", "email", "pay_type", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', 'MyString', '2017-10-07 18:02:33.084540', '2017-10-07 18:02:33.084540', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "reservations"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "reservations" ("created_at", "updated_at", "id") VALUES ('2017-10-07 18:02:33.087748', '2017-10-07 18:02:33.087748', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "reservations" ("created_at", "updated_at", "id") VALUES ('2017-10-07 18:02:33.087748', '2017-10-07 18:02:33.087748', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2017-10-07 18:02:33.090243', '2017-10-07 18:02:33.090243', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', '2017-10-07 18:02:33.090243', '2017-10-07 18:02:33.090243', 298486374)[0m
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+CarTest: test_license_plate_length_should_be_7_
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."license_plate" = ? LIMIT ?[0m  [["license_plate", "XX0000"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CarTest: test_license_plate_length_should_be_unique_
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."license_plate" = ? LIMIT ?[0m  [["license_plate", "XX00001"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------
+CarTest: test_car_with_7_bit_length_and_unqie_license_plate_should_be_saved_
+----------------------------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCar Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cars" WHERE "cars"."license_plate" = ? LIMIT ?[0m  [["license_plate", "XX00003"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "cars" ("license_plate", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["license_plate", "XX00003"], ["created_at", "2017-10-07 18:02:33.126635"], ["updated_at", "2017-10-07 18:02:33.126635"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m

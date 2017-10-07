@@ -5,9 +5,11 @@ one:
   description: MyText
   image_url: MyString
   price: 9.99
+  license_plate: XX00001
 
 two:
   title: MyString
   description: MyText
   image_url: MyString
   price: 9.99
+  license_plate: XX00002
