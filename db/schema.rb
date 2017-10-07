@@ -10,39 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004003631) do
+ActiveRecord::Schema.define(version: 20170923134014) do
 
   create_table "cars", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "image_url"
     t.decimal "price", precision: 8, scale: 2
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "status"
     t.string "license_plate"
     t.string "model"
     t.string "manufactor"
     t.string "style"
     t.string "location"
-  end
-
-# Could not dump table "orders" because of following StandardError
-#   Unknown type 'STRING' for column 'status'
-
-  create_table "reservations", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "reservation_id"
+    t.integer "car_id"
+    t.integer "user_id"
+    t.string "name"
+    t.integer "tel"
+    t.text "address"
+    t.string "email"
+    t.string "pay_type"
+    t.string "status"
+    t.datetime "checkout_time"
+    t.datetime "return_time"
+    t.datetime "real_checkout_time"
+    t.datetime "real_return_time"
+    t.decimal "charge", precision: 8, scale: 2
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "reservations", force: :cascade do |t|
     t.string "name"
     t.text "address"
     t.string "email"
     t.integer "car_id"
     t.integer "user_id"
     t.integer "tel"
-    t.text "status"
+    t.string "status"
     t.datetime "reserve_time"
     t.datetime "checkout_time"
     t.datetime "return_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
