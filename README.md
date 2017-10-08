@@ -1,15 +1,30 @@
 # README
 
 
-superadmin   superadmin@x.com password:123456
+superadmin  
 
-superadmin2   superadmin2@x.com password:123456
+superadmin@x.com  
+password:123456
 
-admin        admin@x.com password:123456
+superadmin2  
 
-admin2        admin2@x.com password:123456
+superadmin2@x.com  
+password:123456
 
-user         customer@x.com  password:123456  
+admin  
+
+admin@x.com  
+password:123456
+
+admin2  
+
+admin2@x.com  
+password:123456
+
+user  
+
+customer@x.com  
+password:123456  
 
 The website is here:  
 https://agile-plateau-36400.herokuapp.com/store/index 
