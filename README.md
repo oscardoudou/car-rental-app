@@ -1,28 +1,23 @@
 # README
 
-
-superadmin  
+  
 
 superadmin@x.com  
 password:123456
 
-superadmin2  
+  
 
 superadmin2@x.com  
 password:123456
-
-admin  
+  
 
 admin@x.com  
 password:123456
-
-admin2  
+  
 
 admin2@x.com  
 password:123456
-
-user  
-
+  
 customer@x.com  
 password:123456  
 
