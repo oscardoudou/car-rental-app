@@ -5,7 +5,6 @@
 superadmin@x.com  
 password:123456
 
-
 superadmin2@x.com  
 password:123456
   
