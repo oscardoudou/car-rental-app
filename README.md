@@ -1,7 +1,6 @@
 # README
 
   
-
 superadmin@x.com  
 password:123456
 
