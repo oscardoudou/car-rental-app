@@ -69,6 +69,4 @@ All functions are at the left side of the page. They will change due to your log
 
 An superadmin can rent a car for an user. Just check out the car directly and choose the user ID.
 
-
-
-
+If you like the design and implement, please star it. Many thanks
